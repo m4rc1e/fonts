@@ -12,7 +12,7 @@ fonts {
   full_name: "Poiret One Regular"
   copyright: "Copyright 2011 The Poiret One Project Authors"
 }
-subsets: "menu"
 subsets: "cyrillic"
 subsets: "latin"
 subsets: "latin-ext"
+subsets: "menu"
