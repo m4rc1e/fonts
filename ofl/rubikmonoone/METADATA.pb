@@ -10,7 +10,7 @@ fonts {
   filename: "RubikMonoOne-Regular.ttf"
   post_script_name: "RubikMonoOne-Regular"
   full_name: "Rubik Mono One Regular"
-  copyright: "Copyright (c) 2013, 2014, Hubert and Fischer, Philipp Hubert (philipp@hubertfischer.com), Sebastian Fischer (sebastian@hubertfischer.com)"
+  copyright: "Copyright 2015 The Rubik Project Authors"
 }
 subsets: "menu"
 subsets: "cyrillic"
