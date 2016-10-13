@@ -9,10 +9,10 @@ fonts {
   weight: 400
   filename: "PoiretOne-Regular.ttf"
   post_script_name: "PoiretOne-Regular"
-  full_name: "Poiret One"
-  copyright: "Copyright (c) 2011, Denis Masharov (denis.masharov@gmail.com)"
+  full_name: "Poiret One Regular"
+  copyright: "Copyright 2011 The Poiret One Project Authors"
 }
-subsets: "menu"
 subsets: "cyrillic"
 subsets: "latin"
 subsets: "latin-ext"
+subsets: "menu"
