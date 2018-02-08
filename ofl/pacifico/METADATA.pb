@@ -10,9 +10,8 @@ fonts {
   filename: "Pacifico-Regular.ttf"
   post_script_name: "Pacifico-Regular"
   full_name: "Pacifico Regular"
-  copyright: "Copyright 2011 The Pacifico Project Authors (https://github.com/Fonthausen/Pacifico)"
+  copyright: "Copyright 2011 The Pacifico Project Authors (contact@sansoxygen.com)"
 }
-subsets: "cyrillic"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
