@@ -8,9 +8,9 @@ fonts {
   style: "normal"
   weight: 400
   filename: "Andika-Regular.ttf"
-  post_script_name: "Andika-Regular"
-  full_name: "Andika Regular"
-  copyright: "Copyright (c) 2004-2011, SIL International (http://www.sil.org/). Licensed under the SIL Open Font License, Version 1.1 (http://scripts.sil.org/OFL), with Reserved Font Names \"Andika\" and \"SIL\"."
+  post_script_name: "Andika"
+  full_name: "Andika"
+  copyright: "Copyright (c) SIL International, 2004-2014."
 }
 subsets: "cyrillic"
 subsets: "cyrillic-ext"
