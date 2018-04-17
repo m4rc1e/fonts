@@ -10,7 +10,16 @@ fonts {
   filename: "VollkornSC-Regular.ttf"
   post_script_name: "VollkornSC-Regular"
   full_name: "Vollkorn SC Regular"
-  copyright: "Copyright 2017 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
+  copyright: "Copyright 2018 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
+}
+fonts {
+  name: "Vollkorn SC"
+  style: "normal"
+  weight: 500
+  filename: "VollkornSC-Medium.ttf"
+  post_script_name: "VollkornSC-Medium"
+  full_name: "Vollkorn SC Medium"
+  copyright: "Copyright 2018 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
 }
 fonts {
   name: "Vollkorn SC"
@@ -19,7 +28,7 @@ fonts {
   filename: "VollkornSC-SemiBold.ttf"
   post_script_name: "VollkornSC-SemiBold"
   full_name: "Vollkorn SC SemiBold"
-  copyright: "Copyright 2017 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
+  copyright: "Copyright 2018 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
 }
 fonts {
   name: "Vollkorn SC"
@@ -28,7 +37,16 @@ fonts {
   filename: "VollkornSC-Bold.ttf"
   post_script_name: "VollkornSC-Bold"
   full_name: "Vollkorn SC Bold"
-  copyright: "Copyright 2017 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
+  copyright: "Copyright 2018 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
+}
+fonts {
+  name: "Vollkorn SC"
+  style: "normal"
+  weight: 800
+  filename: "VollkornSC-ExtraBold.ttf"
+  post_script_name: "VollkornSC-ExtraBold"
+  full_name: "Vollkorn SC ExtraBold"
+  copyright: "Copyright 2018 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
 }
 fonts {
   name: "Vollkorn SC"
@@ -37,7 +55,7 @@ fonts {
   filename: "VollkornSC-Black.ttf"
   post_script_name: "VollkornSC-Black"
   full_name: "Vollkorn SC Black"
-  copyright: "Copyright 2017 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
+  copyright: "Copyright 2018 The Vollkorn Project Authors (https://github.com/FAlthausen/Vollkorn-Typeface)"
 }
 subsets: "cyrillic"
 subsets: "cyrillic-ext"
