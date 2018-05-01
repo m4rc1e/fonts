@@ -10,7 +10,9 @@ fonts {
   filename: "ReemKufi-Regular.ttf"
   post_script_name: "ReemKufi-Regular"
   full_name: "Reem Kufi Regular"
-  copyright: "Copyright  2015-2016 The Reem Kufi Project Authors."
+  copyright: "Copyright  2015-2018 The Reem Kufi Project Authors."
 }
 subsets: "latin"
+subsets: "latin-ext"
 subsets: "menu"
+subsets: "vietnamese"
