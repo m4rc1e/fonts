@@ -1,5 +1,5 @@
 name: "Thasadith"
-designer: "UNKNOWN"
+designer: "Cadson Demak"
 license: "OFL"
 category: "SANS_SERIF"
 date_added: "2018-08-22"
