@@ -1,0 +1,13 @@
+language: python
+
+python:
+  - "3.6"
+
+install:
+  - pip install fontbakery
+
+script:
+  - fontbakery check-googlefonts ofl/notable/*ttf -l FAIL
+
+after_success:
+  - python myscript.py some args
