@@ -5,6 +5,7 @@ python:
 
 before_install:
   - sudo apt-get install -y jq
+  - sudo apt-get install gcc
   - wget https://github.com/khaledhosny/ots/releases/download/v7.1.8/ots-7.1.8-linux.zip
   - unzip ots-7.1.8-linux.zip
   - sudo mv ots-7.1.8-linux/ots-sanitize /usr/local/bin/ots-sanitize
