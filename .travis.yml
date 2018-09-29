@@ -5,9 +5,12 @@ python:
 
 before_install:
   - sudo apt-get install -y jq
+  - wget https://github.com/khaledhosny/ots/releases/download/v7.1.8/ots-7.1.8-linux.zip
+  - unzip ots-7.1.8-linux.zip
+  - sudo mv ots-7.1.8-linux/ots-sanitize /usr/local/bin/ots-sanitize
 
 install:
   - pip install fontbakery
 
 script:
-  - sh run_fb_on_updated_fonts.sh
+  - sh run_fb.sh
