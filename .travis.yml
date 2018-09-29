@@ -1,9 +1,5 @@
 os: osx
 
-language: python
-
-python:
-  - "3.6"
 
 before_install:
   - sudo brew install -y jq
@@ -12,7 +8,7 @@ before_install:
   - sudo mv ots-7.1.8-osx/ots-sanitize /usr/local/bin/ots-sanitize
 
 install:
-  - pip install fontbakery
+  - pip3 install fontbakery
 
 script:
   - sh run_fb.sh
