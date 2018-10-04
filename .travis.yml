@@ -1,14 +1,16 @@
-os: osx
+language: python
 
+python:
+  - "3.6"
 
 before_install:
-  - sudo brew install -y jq
+  - sudo apt-get install -y jq
   - wget https://github.com/khaledhosny/ots/releases/download/v7.1.8/ots-7.1.8-osx.zip
   - unzip ots-7.1.8-osx.zip
   - sudo mv ots-7.1.8-osx/ots-sanitize /usr/local/bin/ots-sanitize
 
 install:
-  - pip3 install fontbakery
+  - pip install fontbakery
 
 script:
   - sh run_fb.sh
