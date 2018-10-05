@@ -44,7 +44,6 @@ def main():
     post_gh_msg("Generating diff images.")
 
     fonts_after = get_fonts_in_pr()
-    print(fonts_after)
 
     auth = (os.environ['BSTACK_USERNAME'], os.environ['BSTACK_ACCESS_KEY'])
     diff = DiffBrowsers(auth, fonts_after, fonts_after, dst_dir=IMG_DIR)
