@@ -12,7 +12,7 @@ before_install:
   # - sudo mv ots-7.1.8-linux/ots-sanitize /usr/local/bin/ots-sanitize
 
 install:
-  # - pip install fontbakery
+  - pip install fontbakery
   - pip install git+https://github.com/googlefonts/diffbrowsers@69168f576ee5d96cced3111ae30e31e444ded332
 
 script:
