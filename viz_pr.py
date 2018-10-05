@@ -37,9 +37,6 @@ def get_fonts_in_pr():
     for item in r.json():
         if item['filename'].endswith('.ttf'):
             font_paths.append(item['filename'])
-    print(font_paths)
-    if len(font_paths) == 1:
-        return [font_paths]
     return font_paths
 
 
@@ -47,6 +44,7 @@ def main():
     post_gh_msg("Generating diff images.")
 
     fonts_after = get_fonts_in_pr()
+    print(fonts_after)
 
     auth = (os.environ['BSTACK_USERNAME'], os.environ['BSTACK_ACCESS_KEY'])
     diff = DiffBrowsers(auth, 'google-fonts', fonts_after, dst_dir=IMG_DIR)
