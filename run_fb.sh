@@ -1,4 +1,10 @@
 #!/bin/sh
+# Run only the most crucial Fontbakery checks. Check fonts render on 
+
+curl -H "Authorization: token $GH_TOKEN" -X POST \
+-d "{\"body\": \"Hello world\"}" \
+"https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
+
 file_names=`curl -v -H "Authorization: token $GH_TOKEN" "https://api.github.com/repos/$TRAVIS_REPO_SLUG/pulls/$TRAVIS_PULL_REQUEST/files" | jq '.[] | .filename' | tr '\n' ' ' | tr '"' ' '`
 fontbakery check-googlefonts \
     -c com.google.fonts/check/001 \
@@ -42,6 +48,5 @@ fontbakery check-googlefonts \
     -c com.google.fonts/check/161 \
     -c com.google.fonts/check/162 \
     -c com.google.fonts/check/165 \
-    -c com.google.fonts/check/has_ttfautohint_params \
     -c com.google.fonts/check/vttclean \
     $file_names -l FAIL -n
