@@ -46,11 +46,11 @@ def main():
     fonts_after = get_fonts_in_pr()
 
     auth = (os.environ['BSTACK_USERNAME'], os.environ['BSTACK_ACCESS_KEY'])
-    diff = DiffBrowsers(auth, fonts_after, fonts_after, dst_dir=IMG_DIR)
+    diffbrowsers = DiffBrowsers(auth, fonts_after, fonts_after, dst_dir=IMG_DIR)
 
-    diff.diff_View('waterfall', gen_gifs=True)
-    diff.update_browsers(gdi_browsers)
-    diff.diff_view('glyphs-all', gen_gifs=True)
+    diffbrowsers.diff_view('waterfall', gen_gifs=True)
+    diffbrowsers.update_browsers(gdi_browsers)
+    diffbrowsers.diff_view('glyphs-all', gen_gifs=True)
 
     gifs = []
     for path, r, files in os.walk(IMG_DIR):
