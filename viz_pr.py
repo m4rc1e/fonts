@@ -59,9 +59,11 @@ def main():
                 continue
             gifs.append(os.path.join(path, f))
     imgur_img_urls = post_images_to_imgur(gifs)
-    for url in imgur_img_urls:
-        print(url)
 
+    img_msg = ""
+    for url in imgur_img_urls:
+        img_msg += '![alt text]({} "{}")\n\n'.format(url, url)
+    post_gh_msg(img_msg)
 
 if __name__ == '__main__':
     main()
