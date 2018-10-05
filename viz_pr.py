@@ -37,6 +37,9 @@ def get_fonts_in_pr():
     for item in r.json():
         if item['filename'].endswith('.ttf'):
             font_paths.append(item['filename'])
+    print(font_paths)
+    if len(font_paths) == 1:
+        return [font_paths]
     return font_paths
 
 
