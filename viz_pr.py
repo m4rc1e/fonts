@@ -47,7 +47,7 @@ def main():
     print(fonts_after)
 
     auth = (os.environ['BSTACK_USERNAME'], os.environ['BSTACK_ACCESS_KEY'])
-    diff = DiffBrowsers(auth, 'from-googlefonts', fonts_after, dst_dir=IMG_DIR)
+    diff = DiffBrowsers(auth, fonts_after, fonts_after, dst_dir=IMG_DIR)
 
     diff.diff_View('waterfall', gen_gifs=True)
     diff.update_browsers(gdi_browsers)
