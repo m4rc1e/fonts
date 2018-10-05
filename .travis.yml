@@ -15,7 +15,7 @@ install:
   - pip install fontbakery
   - pip install Pillow
   - pip install pybrowserstack-screenshots==0.1
-  - pip install git+https://github.com/m4rc1e/diffbrowsers@6a4475b436b8f685bf3ad075dc41a37127571a38
+  - pip install git+https://github.com/m4rc1e/diffbrowsers@d76510a62f8061c5335168378b45e01328c2ae67
 
 script:
   - python viz_pr.py
