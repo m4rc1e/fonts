@@ -5,7 +5,7 @@ import requests
 import json
 from diffbrowsers.diffbrowsers import DiffBrowsers
 from diffbrowsers.browsers import gdi_browsers
-
+import time
 
 IMG_DIR = 'imgs'
 
