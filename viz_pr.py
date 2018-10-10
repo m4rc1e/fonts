@@ -8,13 +8,13 @@ from diffbrowsers.gfregression import VIEWS
 import time
 
 IMG_DIR = 'imgs'
-GFR_URL = ''
+GFR_URL = 'http://159.65.243.73'
 
 
-def post_image_to_gfr(path, uuid):
+def post_images_to_gfr(paths, uuid):
     """Post images to GF Regression"""
     url_endpoint = GFR_URL + '/api/upload-media'
-    payload = [('files', open(path, 'rb'))]
+    payload = [('files', open(path, 'rb')) for path in paths]
     r = requests.post(
         url_endpoint,
         data={'uuid': uuid},
@@ -69,7 +69,7 @@ def main():
                 continue
             gifs.append(os.path.join(path, f))
     uuid = diffbrowsers.gf_regression.info['uuid']
-    gfr_img_urls = [post_image_to_gfr(path, uuid) for path in gifs]
+    gfr_img_urls = post_images_to_gfr(gifs, uuid)
 
     img_msg = ""
     for url in gfr_img_urls:
