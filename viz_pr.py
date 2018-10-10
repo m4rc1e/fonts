@@ -1,11 +1,12 @@
 """Generate before and after gifs using diffbrowsers. Upload them to imgur then post them to PR"""
 import os
+import shutil
 import requests
 import json
 from diffbrowsers.diffbrowsers import DiffBrowsers
 from diffbrowsers.browsers import test_browsers
 from diffbrowsers.gfregression import VIEWS
-import time
+
 
 IMG_DIR = 'imgs'
 GFR_URL = 'http://159.65.243.73'
@@ -40,6 +41,32 @@ def get_fonts_in_pr():
     return font_paths
 
 
+def find_files(directory, ext='.gif'):
+    """Recurs through directory and return files which have the given extension"""
+    found_files = []
+    for path, r, files in os.walk(directory):
+        for f in files:
+            if not f.endswith(ext):
+                continue
+            found_files.append(os.path.join(path, f))
+    return found_files
+
+
+def get_view_type_from_path(path):
+    return path.split(os.path.sep)[-3]
+
+
+def rename_img_to_include_view(path, dst):
+    if not os.path.isdir(dst):
+        os.mkdir(dst)
+    view = get_view_type_from_path(path)
+    filename = os.path.basename(path)
+    new_filename = "%s_%s" % (view, filename)
+    new_path = os.path.join(dst, new_filename)
+    shutil.copy(path, new_path)
+    return new_path
+
+
 def main():
     post_gh_msg("Generating diff images.")
 
@@ -62,14 +89,10 @@ def main():
         if view in VIEWS:
             diffbrowsers.diff_view(view, pt=32, gen_gifs=True)
 
-    gifs = []
-    for path, r, files in os.walk(IMG_DIR):
-        for f in files:
-            if not f.endswith('.gif'):
-                continue
-            gifs.append(os.path.join(path, f))
+    gifs = find_files(IMG_DIR, ext='gif')
+    gifs_to_post = [rename_img_to_include_view(p, dst='./tmp') for p in gifs]
     uuid = diffbrowsers.gf_regression.info['uuid']
-    gfr_img_urls = post_images_to_gfr(gifs, uuid)
+    gfr_img_urls = post_images_to_gfr(gifs_to_post, uuid)
 
     img_msg = ""
     for url in gfr_img_urls:
