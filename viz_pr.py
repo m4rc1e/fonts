@@ -4,6 +4,7 @@ import requests
 import json
 from diffbrowsers.diffbrowsers import DiffBrowsers
 from diffbrowsers.browsers import test_browsers
+from diffbrowsers.gfregression import VIEWS
 import time
 
 IMG_DIR = 'imgs'
@@ -58,7 +59,8 @@ def main():
 
     views_to_diff = diffbrowsers.gf_regression.info['diffs']
     for view in views_to_diff:
-        diffbrowsers.diff_view(view, pt=32, gen_gifs=True)
+        if view in VIEWS:
+            diffbrowsers.diff_view(view, pt=32, gen_gifs=True)
 
     gifs = []
     for path, r, files in os.walk(IMG_DIR):
