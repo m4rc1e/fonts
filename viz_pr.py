@@ -14,7 +14,7 @@ GFR_URL = ''
 def post_image_to_gfr(path, uuid):
     """Post images to GF Regression"""
     url_endpoint = GFR_URL + '/api/upload-media'
-    payload = [('files', open(f, 'rb')) for f in path]
+    payload = [('files', open(path, 'rb'))]
     r = requests.post(
         url_endpoint,
         data={'uuid': uuid},
