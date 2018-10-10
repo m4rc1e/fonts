@@ -1,26 +1,25 @@
 """Generate before and after gifs using diffbrowsers. Upload them to imgur then post them to PR"""
-import sys
 import os
 import requests
 import json
 from diffbrowsers.diffbrowsers import DiffBrowsers
-from diffbrowsers.browsers import gdi_browsers
+from diffbrowsers.browsers import test_browsers
 import time
 
 IMG_DIR = 'imgs'
+GFR_URL = ''
 
 
-def post_images_to_imgur(paths):
-    """Post images to hosting service imgur."""
-    upload_urls = []
-    for path in paths:
-        r = requests.post('https://api.imgur.com/3/image',
-            data={'image': open(path, 'rb').read(), 'type': 'file'},
-            headers = {'Authorization': 'Client-ID {}'.format(os.environ['IMGUR_CLIENT_ID'])}
-        )
-        upload_urls.append(r.json()['data']['link'])
-        time.sleep(1)
-    return upload_urls
+def post_image_to_gfr(path, uuid):
+    """Post images to GF Regression"""
+    url_endpoint = GFR_URL + '/api/upload-media'
+    payload = [('files', open(f, 'rb')) for f in path]
+    r = requests.post(
+        url_endpoint,
+        data={'uuid': uuid},
+        files=payload
+    )
+    return r.json()['items']
 
 
 def post_gh_msg(msg):
@@ -46,11 +45,21 @@ def main():
     fonts_after = get_fonts_in_pr()
 
     auth = (os.environ['BSTACK_USERNAME'], os.environ['BSTACK_ACCESS_KEY'])
-    diffbrowsers = DiffBrowsers(auth, fonts_after, fonts_after, dst_dir=IMG_DIR)
+    browsers_to_test = test_browsers['vf_browsers']
+    diffbrowsers = DiffBrowsers(auth=auth,
+                                gfr_instance_url='http://159.65.243.73',
+                                dst_dir=IMG_DIR,
+                                browsers=browsers_to_test)
+
+    diffbrowsers.new_session('from-googlefonts', fonts_after)
 
     diffbrowsers.diff_view('waterfall', gen_gifs=True)
-    diffbrowsers.update_browsers(gdi_browsers)
-    diffbrowsers.diff_view('glyphs-all', gen_gifs=True)
+    diffbrowsers.update_browsers(test_browsers['gdi_browsers'])
+    diffbrowsers.diff_view('glyphs-all', pt=32, gen_gifs=True)
+
+    views_to_diff = diffbrowsers.gf_regression.info['diffs']
+    for view in views_to_diff:
+        diffbrowsers.diff_view(view, pt=32, gen_gifs=True)
 
     gifs = []
     for path, r, files in os.walk(IMG_DIR):
@@ -58,11 +67,13 @@ def main():
             if not f.endswith('.gif'):
                 continue
             gifs.append(os.path.join(path, f))
-    imgur_img_urls = post_images_to_imgur(gifs)
+    uuid = diffbrowsers.gf_regression.info['uuid']
+    gfr_img_urls = [post_image_to_gfr(path, uuid) for path in gifs]
 
     img_msg = ""
-    for url in imgur_img_urls:
+    for url in gfr_img_urls:
         img_msg += '![alt text]({} "{}")\n\n'.format(url, url)
+        img_msg += '*{}\n*'.format(url)
     post_gh_msg(img_msg)
 
 if __name__ == '__main__':
