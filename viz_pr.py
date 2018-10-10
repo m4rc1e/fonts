@@ -55,7 +55,6 @@ def main():
 
     diffbrowsers.diff_view('waterfall', gen_gifs=True)
     diffbrowsers.update_browsers(test_browsers['gdi_browsers'])
-    diffbrowsers.diff_view('glyphs-all', pt=32, gen_gifs=True)
 
     views_to_diff = diffbrowsers.gf_regression.info['diffs']
     for view in views_to_diff:
