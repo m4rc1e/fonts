@@ -20,7 +20,7 @@ def post_images_to_gfr(paths, uuid):
         data={'uuid': uuid},
         files=payload
     )
-    return r.json()['items']
+    return [os.path.join(GFR_URL, i) for i in r.json()['items']]
 
 
 def post_gh_msg(msg):
@@ -74,7 +74,7 @@ def main():
     img_msg = ""
     for url in gfr_img_urls:
         img_msg += '![alt text]({} "{}")\n\n'.format(url, url)
-        img_msg += '*{}\n*'.format(url)
+        img_msg += '*{}\n*'.format(os.path.basename(url))
     post_gh_msg(img_msg)
 
 if __name__ == '__main__':
