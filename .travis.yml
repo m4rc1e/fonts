@@ -13,7 +13,7 @@ before_install:
 
 install:
   - pip install fontbakery
-  - pip install git+https://github.com/m4rc1e/diffbrowsers@0571e1e785f035251e8916aa08f702d4bb368ed2
+  - pip install git+https://github.com/m4rc1e/diffbrowsers@ea1cdef8a2b5bce4fd7fbd21dd0e864c123b73bf
 
 # script:
 #   - sh run_fb.sh
