@@ -1,0 +1,22 @@
+language: python
+
+dist: xenial 
+
+python:
+  - "3.6"
+
+before_install:
+  - sudo apt-get install -y jq
+  - wget https://github.com/khaledhosny/ots/releases/download/v7.1.8/ots-7.1.8-linux.zip
+  - unzip ots-7.1.8-linux.zip
+  - sudo mv ots-7.1.8-linux/ots-sanitize /usr/local/bin/ots-sanitize
+
+install:
+  - pip install fontbakery
+  - pip install git+https://github.com/m4rc1e/diffbrowsers@ea1cdef8a2b5bce4fd7fbd21dd0e864c123b73bf
+
+script:
+  - sh run_fb.sh
+
+after_success:
+  - python viz_pr.py
