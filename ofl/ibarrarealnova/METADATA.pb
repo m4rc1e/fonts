@@ -1,0 +1,44 @@
+name: "Ibarra Real Nova"
+designer: "Octavio Pardo"
+license: "OFL"
+category: "SERIF"
+date_added: "2018-10-10"
+fonts {
+  name: "Ibarra Real Nova"
+  style: "normal"
+  weight: 400
+  filename: "IbarraRealNova-Regular.ttf"
+  post_script_name: "IbarraRealNova-Regular"
+  full_name: "Ibarra Real Nova Regular"
+  copyright: "Copyright (c) 2007 by jose maria ribagorda & The Ibarra Real Authors"
+}
+fonts {
+  name: "Ibarra Real Nova"
+  style: "italic"
+  weight: 400
+  filename: "IbarraRealNova-Italic.ttf"
+  post_script_name: "IbarraRealNova-Italic"
+  full_name: "Ibarra Real Nova Italic"
+  copyright: "Copyright (c) 2007 by jose maria ribagorda & The Ibarra Real Authors"
+}
+fonts {
+  name: "Ibarra Real Nova"
+  style: "normal"
+  weight: 600
+  filename: "IbarraRealNova-SemiBold.ttf"
+  post_script_name: "IbarraRealNova-SemiBold"
+  full_name: "Ibarra Real Nova SemiBold"
+  copyright: "Copyright (c) 2007 by jose maria ribagorda & The Ibarra Real Authors"
+}
+fonts {
+  name: "Ibarra Real Nova"
+  style: "normal"
+  weight: 700
+  filename: "IbarraRealNova-Bold.ttf"
+  post_script_name: "IbarraRealNova-Bold"
+  full_name: "Ibarra Real Nova Bold"
+  copyright: "Copyright (c) 2007 by jose maria ribagorda & The Ibarra Real Authors"
+}
+subsets: "latin"
+subsets: "latin-ext"
+subsets: "menu"
