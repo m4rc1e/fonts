@@ -9,9 +9,9 @@ fonts {
   weight: 400
   filename: "Sacramento-Regular.ttf"
   post_script_name: "Sacramento-Regular"
-  full_name: "Sacramento"
-  copyright: "Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com), with Reserved Font Name 'Sacramento'"
+  full_name: "Sacramento Regular"
+  copyright: "Copyright 2012 The Sacramento Project Authors (https://github.com/googlefonts/SacramentoFont), with Reserved Font Name \"Sacramento\""
 }
-subsets: "menu"
 subsets: "latin"
 subsets: "latin-ext"
+subsets: "menu"
