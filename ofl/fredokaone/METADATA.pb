@@ -10,7 +10,8 @@ fonts {
   filename: "FredokaOne-Regular.ttf"
   post_script_name: "FredokaOne-Regular"
   full_name: "Fredoka One"
-  copyright: "Copyright (c) 2011 Milena B Brandao (milenabbrandao@gmail.com), with Reserved Font Name \"Fredoka\""
+  copyright: "Copyright 2010 The Fredoka Project Authors."
 }
-subsets: "menu"
+subsets: "hebrew"
 subsets: "latin"
+subsets: "menu"

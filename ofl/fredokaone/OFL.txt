@@ -1,4 +1,4 @@
-Copyright (c) 2011, Milena Brandao (milenabbrandao@gmail.com), with Reserved Font Name Fredoka.
+Copyright 2010 The Fredoka Project Authors.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
