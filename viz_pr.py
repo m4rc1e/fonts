@@ -5,6 +5,7 @@ import requests
 import json
 from zipfile import ZipFile
 import subprocess
+from uuid import uuid4
 
 
 REPORT_DIR = 'out'
@@ -58,7 +59,7 @@ def main():
                     fonts_after + \
                     ["-a", "-o", REPORT_DIR])
     report_zip = shutil.make_archive("out", 'zip', REPORT_DIR)
-    uuid = '2222'
+    uuid = str(uuid4())
     zip_url = post_media_to_gfr([report_zip], uuid)
     msg = "Diff images: {}".format(zip_url[0])
     post_gh_msg(msg)
