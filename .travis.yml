@@ -11,7 +11,7 @@ before_install:
 
 install:
   - pip install fontbakery
-  - pip install git+https://www.github.com/m4rc1e/tools@34d2c6cfd6721a56de861db8afb68a1ed4e71bed
+  - pip install git+https://www.github.com/m4rc1e/tools@3c9021cce74203d2e3cc89783f0d44ae2ac9101f
 
 script:
   - sh run_fb.sh
