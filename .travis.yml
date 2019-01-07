@@ -7,7 +7,7 @@ python:
 
 before_install:
   - sudo apt-get install -y jq
-  - sudo apt-get install -y libfreetype6-dev libglib2.0-dev libcairo2-dev libharfbuzz-dev, libharfbuzz-bin
+  - sudo apt-get install -y libfreetype6-dev libglib2.0-dev libcairo2-dev libharfbuzz-dev libharfbuzz-bin
 
 install:
   - pip install fontbakery
