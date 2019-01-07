@@ -14,7 +14,6 @@ install:
   - pip install git+https://www.github.com/m4rc1e/tools@49dcdaf6f7e4c6a738a3d8d806415f36060d5c5d
 
 script:
+  - python viz_pr.py
   - sh run_fb.sh
 
-after_success:
-  - python viz_pr.py
