@@ -3,23 +3,23 @@ import os
 import shutil
 import requests
 import json
-from diffbrowsers.diffbrowsers import DiffBrowsers
-from diffbrowsers.browsers import test_browsers
-from diffbrowsers.gfregression import VIEWS
+from zipfile import ZipFile
+import subprocess
 
 
-IMG_DIR = 'imgs'
+REPORT_DIR = 'out'
 GFR_URL = 'http://159.65.243.73'
 
 
-def post_images_to_gfr(paths, uuid):
+def post_media_to_gfr(paths, uuid):
     """Post images to GF Regression"""
     url_endpoint = GFR_URL + '/api/upload-media'
     payload = [('files', open(path, 'rb')) for path in paths]
     r = requests.post(
         url_endpoint,
         data={'uuid': uuid},
-        files=payload
+        files=payload,
+        headers={"Access-Token": os.environ["GFR_TOKEN]"}
     )
     return [os.path.join(GFR_URL, i) for i in r.json()['items']]
 
@@ -52,53 +52,16 @@ def find_files(directory, ext='.gif'):
     return found_files
 
 
-def get_view_type_from_path(path):
-    return path.split(os.path.sep)[-3]
-
-
-def rename_img_to_include_view(path, dst):
-    if not os.path.isdir(dst):
-        os.mkdir(dst)
-    view = get_view_type_from_path(path)
-    filename = os.path.basename(path)
-    new_filename = "%s_%s" % (view, filename)
-    new_path = os.path.join(dst, new_filename)
-    shutil.copy(path, new_path)
-    return new_path
-
-
 def main():
-    post_gh_msg("Generating diff images.")
-
     fonts_after = get_fonts_in_pr()
+    subprocess.call(["gftools qa"] + \
+                    fonts_after + \
+                    ["-a", "-o", REPORT_DIR])
+    report_zip = shutil.make_archive("out", 'zip', report_dir)
+    zip_url = post_media_to_gfr([report_zip], uuid)
+    msg = "Diff images: {}".format(zip_url)[0])
+    post_gh_msg(msg)
 
-    auth = (os.environ['BSTACK_USERNAME'], os.environ['BSTACK_ACCESS_KEY'])
-    browsers_to_test = test_browsers['vf_browsers']
-    diffbrowsers = DiffBrowsers(auth=auth,
-                                gfr_instance_url='http://159.65.243.73',
-                                dst_dir=IMG_DIR,
-                                browsers=browsers_to_test)
-
-    diffbrowsers.new_session('from-googlefonts', fonts_after)
-
-    diffbrowsers.diff_view('waterfall', gen_gifs=True)
-    diffbrowsers.update_browsers(test_browsers['gdi_browsers'])
-
-    views_to_diff = diffbrowsers.gf_regression.info['diffs']
-    for view in views_to_diff:
-        if view in VIEWS:
-            diffbrowsers.diff_view(view, pt=32, gen_gifs=True)
-
-    gifs = find_files(IMG_DIR, ext='gif')
-    gifs_to_post = [rename_img_to_include_view(p, dst='./tmp') for p in gifs]
-    uuid = diffbrowsers.gf_regression.info['uuid']
-    gfr_img_urls = post_images_to_gfr(gifs_to_post, uuid)
-
-    img_msg = ""
-    for url in gfr_img_urls:
-        img_msg += '![alt text]({} "{}")\n\n'.format(url, url)
-        img_msg += '*{}\n*'.format(os.path.basename(url))
-    post_gh_msg(img_msg)
 
 if __name__ == '__main__':
     main()
