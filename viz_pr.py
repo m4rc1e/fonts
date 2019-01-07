@@ -54,7 +54,7 @@ def find_files(directory, ext='.gif'):
 
 def main():
     fonts_after = get_fonts_in_pr()
-    subprocess.call(["gftools qa"] + \
+    subprocess.call(["gftools", "qa"] + \
                     fonts_after + \
                     ["-a", "-o", REPORT_DIR])
     report_zip = shutil.make_archive("out", 'zip', REPORT_DIR)
