@@ -19,7 +19,7 @@ def post_media_to_gfr(paths, uuid):
         url_endpoint,
         data={'uuid': uuid},
         files=payload,
-        headers={"Access-Token": os.environ["GFR_TOKEN]"}
+        headers={"Access-Token": os.environ["GFR_TOKEN"]}
     )
     return [os.path.join(GFR_URL, i) for i in r.json()['items']]
 
@@ -60,7 +60,7 @@ def main():
     report_zip = shutil.make_archive("out", 'zip', REPORT_DIR)
     uuid = '2222'
     zip_url = post_media_to_gfr([report_zip], uuid)
-    msg = "Diff images: {}".format(zip_url)[0])
+    msg = "Diff images: {}".format(zip_url[0])
     post_gh_msg(msg)
 
 
