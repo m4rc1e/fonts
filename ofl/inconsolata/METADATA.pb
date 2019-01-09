@@ -10,7 +10,7 @@ fonts {
   filename: "Inconsolata-Regular.ttf"
   post_script_name: "Inconsolata-Regular"
   full_name: "Inconsolata Regular"
-  copyright: "Copyright 2006 The Inconsolata Project Authors"
+  copyright: "Copyright 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)"
 }
 fonts {
   name: "Inconsolata"
@@ -19,7 +19,7 @@ fonts {
   filename: "Inconsolata-Bold.ttf"
   post_script_name: "Inconsolata-Bold"
   full_name: "Inconsolata Bold"
-  copyright: "Copyright 2006 The Inconsolata Project Authors"
+  copyright: "Copyright 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)"
 }
 subsets: "latin"
 subsets: "latin-ext"
