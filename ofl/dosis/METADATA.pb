@@ -2,12 +2,12 @@ name: "Dosis"
 designer: "Impallari Type"
 license: "OFL"
 category: "SANS_SERIF"
-date_added: "2018-11-06"
+date_added: "2019-01-23"
 fonts {
   name: "Dosis"
   style: "normal"
-  weight: 200
-  filename: "Dosis-ExtraLight.ttf"
+  weight: 400
+  filename: "Dosis-Regular.ttf"
   post_script_name: "Dosis-ExtraLight"
   full_name: "Dosis ExtraLight"
   copyright: "Copyright 2011 The Dosis Project Authors (https://github.com/impallari/Dosis)"
