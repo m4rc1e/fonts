@@ -10,11 +10,12 @@ fonts {
   filename: "Dosis-Regular.ttf"
   post_script_name: "Dosis-ExtraLight"
   full_name: "Dosis ExtraLight"
-  copyright: "Copyright 2011 The Dosis Project Authors (https://github.com/impallari/Dosis)"
+  copyright: "Copyright 2011 The Dosis Project Authors (impallari@gmail.com)"
 }
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
+subsets: "vietnamese"
 axes {
   tag: "wght"
   min_value: 200.0
