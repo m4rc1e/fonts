@@ -1,5 +1,6 @@
 """Generate before and after gifs using diffbrowsers. Upload them to imgur then post them to PR"""
 import os
+import re
 import shutil
 import requests
 import json
@@ -39,14 +40,26 @@ def get_fonts_in_pr(repo_slug=None, pull_id=None):
     font_paths = []
     pull_id = pull_id if pull_id else os.environ['TRAVIS_PULL_REQUEST']
     repo_slug = repo_slug if repo_slug else os.environ['TRAVIS_REPO_SLUG']
-    r = requests.get("https://api.github.com/repos/{}/pulls/{}/files".format(repo_slug, str(pull_id)),
+    api_url = "https://api.github.com/repos/{}/pulls/{}/files?page={}&per_page=30"
+
+    # Find last api page
+    r = requests.get(api_url.format(repo_slug, str(pull_id), "1"),
         headers={'Authorization': 'token {}'.format(os.environ['GH_TOKEN'])})
-    for item in r.json():
-        filename = item['filename']
-        if filename.endswith('.ttf') and item['status'] != 'removed':
-            if len(os.path.normpath(filename).split(os.path.sep)) > 3:
-                continue
-            font_paths.append(filename)
+    if 'link' in r.headers:
+        pages = re.search(
+            r'(?<=page\=)[0-9]{1,5}(?<!\&per_page=50\>\; rel="last")',
+            r.headers['link']).group(0)
+    else:
+        pages = 1
+
+    for page in range(1, int(pages) + 1):
+        r = requests.get(api_url.format(repo_slug, str(pull_id), page))
+        for item in r.json():
+            filename = item['filename']
+            if filename.endswith('.ttf') and item['status'] != 'removed':
+                if len(os.path.normpath(filename).split(os.path.sep)) > 3:
+                    continue
+                font_paths.append(filename)
     return font_paths
 
 
