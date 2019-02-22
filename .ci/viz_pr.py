@@ -90,18 +90,22 @@ def main():
         post_gh_msg("No fonts found. Skipping font QA")
         return
     families = sep_fonts_into_families(fonts_after)
-    for family, fonts in families.items():
-        family_qa_dir = "{}_qa".format(family)
-        subprocess.call(["gftools", "qa"] + \
-                        fonts + \
-                        ["-a", "-o", family_qa_dir])
-        # upload QA zip to GFRegression
-        report_zip = shutil.make_archive(family_qa_dir, "zip", family_qa_dir)
-        uuid = str(uuid4())
-        zip_url = post_media_to_gfr([report_zip], uuid)
-        msg = "{} Diff images: [{}.zip]({})".format(family, family_qa_dir, zip_url[0])
-        # TODO (M Foley as FB report and diff report)
-        post_gh_msg(msg)
+    if len(families) > 1:
+        post_gh_msg(("Aborting QA. PR contains {} families. "
+                     "Please pr them individually.").format(len(families)))
+        return
+
+    family_qa_dir = "qa"
+    subprocess.call(["gftools", "qa"] + \
+                    fonts_after + \
+                    ["-a", "-o", family_qa_dir])
+    # upload QA zip to GFRegression
+    report_zip = shutil.make_archive(family_qa_dir, "zip", family_qa_dir)
+    uuid = str(uuid4())
+    zip_url = post_media_to_gfr([report_zip], uuid)
+    msg = "Diff images: [{}.zip]({})".format(family_qa_dir, zip_url[0])
+    # TODO (M Foley as FB report and diff report)
+    post_gh_msg(msg)
 
 
 if __name__ == '__main__':
