@@ -53,7 +53,8 @@ def get_fonts_in_pr(repo_slug=None, pull_id=None):
         pages = 1
 
     for page in range(1, int(pages) + 1):
-        r = requests.get(api_url.format(repo_slug, str(pull_id), page))
+        r = requests.get(api_url.format(repo_slug, str(pull_id), page),
+            headers={'Authorization': 'token {}'.format(os.environ['GH_TOKEN'])})
         for item in r.json():
             filename = item['filename']
             if filename.endswith('.ttf') and item['status'] != 'removed':
