@@ -104,9 +104,10 @@ def main():
     report_zip = shutil.make_archive(family_qa_dir, "zip", family_qa_dir)
     uuid = str(uuid4())
     zip_url = post_media_to_gfr([report_zip], uuid)
-    msg = "Diff images: [{}.zip]({})".format(family_qa_dir, zip_url[0])
-    # TODO (M Foley as FB report and diff report)
-    post_gh_msg(msg)
+    with open(os.path.join(family_qa_dir, "Fontbakery", "report.md"), "r") as fb:
+        msg = "Diff images: [{}.zip]({})\n\n{}".format(
+                family_qa_dir, zip_url[0], fb.read())
+        post_gh_msg(msg)
 
 
 if __name__ == '__main__':
