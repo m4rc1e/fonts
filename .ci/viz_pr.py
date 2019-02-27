@@ -1,4 +1,4 @@
-"""Generate before and after gifs using diffbrowsers. Upload them to imgur then post them to PR"""
+"""Run gftools qa in travis on new/modified fonts and output results as message in PR"""
 import os
 import re
 import shutil
@@ -105,8 +105,8 @@ def main():
     uuid = str(uuid4())
     zip_url = post_media_to_gfr([report_zip], uuid)
     with open(os.path.join(family_qa_dir, "Fontbakery", "report.md"), "r") as fb:
-        msg = "Diff images: [{}.zip]({})\n\n{}".format(
-                family_qa_dir, zip_url[0], fb.read())
+        msg = "{}\n\n## Diff images: [{}.zip]({})".format(
+            fb.read(), family_qa_dir, zip_url[0])
         post_gh_msg(msg)
 
 
