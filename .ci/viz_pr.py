@@ -6,6 +6,7 @@ import requests
 import json
 from zipfile import ZipFile
 import subprocess
+from fontTools.ttLib import TTFont
 from uuid import uuid4
 import logging
 
@@ -33,7 +34,6 @@ def post_gh_msg(msg, repo_slug=None, pull_id=None):
     r = requests.post("https://api.github.com/repos/{}/issues/{}/comments".format(repo_slug, pull_id),
         data=json.dumps({'body': msg}),
         headers={'Authorization': 'token {}'.format(os.environ['GH_TOKEN'])})
-    print(r.text)
 
 
 def get_fonts_in_pr(repo_slug=None, pull_id=None):
@@ -85,6 +85,15 @@ def sep_fonts_into_families(fonts):
     return families
 
 
+def fonts_have_multiple_axes(ttfonts):
+    for ttfont in ttfonts:
+        if 'fvar' not in ttfont:
+            continue
+        if len(ttfont['fvar'].axes) > 1:
+            return True
+    return False
+
+
 def main():
     fonts_after = get_fonts_in_pr()
     if not fonts_after:
@@ -94,6 +103,10 @@ def main():
     if len(families) > 1:
         post_gh_msg(("Aborting QA. PR contains {} families. "
                      "Please pr them individually.").format(len(families)))
+        return
+    ttfonts = [TTFont(f) for f in fonts_after]
+    if fonts_have_multiple_axes(ttfonts):
+        post_gh_msg("Aborting QA. Fonts have more than one vf axis")
         return
 
     family_qa_dir = "qa"
