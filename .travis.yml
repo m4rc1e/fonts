@@ -21,5 +21,6 @@ install:
   - pip install git+https://github.com/googlefonts/gftools
 
 script:
+  - hb-view --help
   - python .ci/viz_pr.py
 
