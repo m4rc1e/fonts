@@ -1,17 +1,9 @@
 language: python
 
-dist: xenial 
+dist: trusty 
 
 python:
-  - "3.7"
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - gcc-7
-      - g++-7
+  - "3.6.1"
 
 before_install:
   - sudo apt-get update
@@ -30,7 +22,5 @@ install:
   - pip install git+https://github.com/googlefonts/gftools
 
 script:
-  - export CC=gcc-7
-  - export CXX=g++-7
   - python .ci/viz_pr.py
 
