@@ -12,12 +12,12 @@ before_install:
   - curl -O "https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-2.3.1.tar.bz2"
   - tar -xjvf "harfbuzz-2.3.1.tar.bz2"
   - cd harfbuzz-2.3.1
-  - ./configure --disable-dependency-tracking --disable-gtk-doc-html --with-glib=no --with-cairo=yes --with-icu=no --enable-static --disable-shared
+  - ./configure --with-cairo=yes
   - sudo make
   - sudo make install
-  - cd util
-  - PATH=$(pwd):$PATH
-  - cd ../..
+    # - cd util
+    # - PATH=$(pwd):$PATH
+    # - cd ../..
 
 install:
   - pip install git+https://github.com/googlefonts/gftools
