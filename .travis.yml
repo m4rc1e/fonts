@@ -17,7 +17,7 @@ before_install:
   - sudo make install
     # - cd util
     # - PATH=$(pwd):$PATH
-    # - cd ../..
+  - cd ..
 
 install:
   - pip install git+https://github.com/googlefonts/gftools
