@@ -7,11 +7,11 @@ python:
 
 
 before_install:
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r-test -y
+        #  - sudo add-apt-repository ppa:ubuntu-toolchain-r-test -y
   - sudo apt-get update
-  - sudo apt-get install gcc-7 g++-7
-  - export CC=gcc-7
-  - export CXX=g++-7
+    #- sudo apt-get install gcc-7 g++-7
+    #- export CC=gcc-7
+    #- export CXX=g++-7
   - sudo apt-get install -y jq
   - sudo apt-get install -y libfreetype6-dev libglib2.0-dev libcairo2-dev
   - curl -O "https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-2.3.0.tar.bz2"
