@@ -1,9 +1,9 @@
 language: python
 
-dist: trusty 
+dist: xenial 
 
 python:
-  - "3.6.1"
+  - "3.7"
 
 before_install:
   - sudo apt-get update
@@ -14,6 +14,7 @@ before_install:
   - cd harfbuzz-2.3.1
   - ./configure --with-cairo=yes
   - make
+  - make install
   - cd util
   - PATH=$(pwd):$PATH
   - cd ../..
