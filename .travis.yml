@@ -3,7 +3,7 @@ language: python
 dist: xenial
 
 python:
-  - "3.7"
+  - "3.7.1"
 
 
 before_install:
