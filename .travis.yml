@@ -3,7 +3,7 @@ language: python
 dist: trusty
 
 python:
-  - "3.7"
+  - "3.6.1"
 
 
 before_install:
