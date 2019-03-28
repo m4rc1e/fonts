@@ -22,7 +22,7 @@ before_install:
   - cd ..
 
 install:
-  - pip install git+https://github.com/googlefonts/gftools
+  - pip install git+https://github.com/m4rc1e/gftools.git@pil-test
 
 script:
   - python .ci/viz_pr.py
