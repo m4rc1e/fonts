@@ -22,7 +22,7 @@ before_install:
   - cd ..
 
 install:
-  - pip install git+https://github.com/m4rc1e/gftools.git@pil-test
+  - pip install git+https://github.com/m4rc1e/gftools.git@b6441b5b8013e7ecf4acb339c4324d2956c61e3c
 
 script:
   - python .ci/viz_pr.py
