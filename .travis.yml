@@ -24,7 +24,7 @@ before_install:
 install:
   - pip install git+https://github.com/m4rc1e/tools@ef405aa40b068c88ea06075b80343a89e1f7000e
   - pip uninstall fontdiffenator -y
-  - pip install git+https://github.com/m4rc1e/fontdiffenator@bb256a4dd9cb4642c4e13b7544e1bd03fee53ada
+  - pip install git+https://github.com/m4rc1e/fontdiffenator@2fc087afb6ead441373c212f6bdf08c06b3739f0
 
 script:
   - echo "hello"
