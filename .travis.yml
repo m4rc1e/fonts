@@ -25,6 +25,6 @@ install:
   - pip install git+https://github.com/m4rc1e/tools@ef405aa40b068c88ea06075b80343a89e1f7000e
 
 script:
-  - free
+  - echo "hello"
   - python .ci/viz_pr.py
 
