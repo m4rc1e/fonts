@@ -22,7 +22,7 @@ before_install:
   - cd ..
 
 install:
-  - pip install git+https://github.com/m4rc1e/tools@eec23e921d7c637221364468a67db5ae5f93e291
+  - pip install git+https://github.com/m4rc1e/tools@20bc01cb2fe368e356239ed56bf79ed24b1b3100
 
 script:
   - free
