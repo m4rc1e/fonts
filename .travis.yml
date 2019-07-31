@@ -22,6 +22,6 @@ install:
   - pip install git+https://github.com/m4rc1e/tools
 
 script:
-  - gftools qa -pr $TRAVIS_PULL_REQUEST -gfb -a -o qa -ogh
+  - gftools qa -pr "https://github.com/m4rc1e/fonts/pulls/$TRAVIS_PULL_REQUEST" -gfb -a -o qa -ogh
 
 
