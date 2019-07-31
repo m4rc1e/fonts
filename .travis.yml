@@ -19,8 +19,9 @@ before_install:
   - cd ../..
 
 install:
-  - pip install git+https://github.com/googlefonts/gftools
+  - pip install git+https://github.com/m4rc1e/gftools
 
 script:
-  - python .ci/viz_pr.py
+  - gftools qa -pr $TRAVIS_PULL_REQUEST -gfb -a -o qa -ogh
+
 
