@@ -6,7 +6,7 @@ HAS_FONTS=$(curl -H "Authorization: token $GH_TOKEN" $PR_FILES | jq '[.[] | .fil
 if [ "$HAS_FONTS" = true ];
 then
     echo "Running gftools qa"
-    #gftools qa -pr https://github.com/$TRAVIS_REPO_SLUG/pulls/$TRAVIS_PULL_REQUEST -gfb -a -o qa -ogh
+    gftools qa -pr https://github.com/$TRAVIS_REPO_SLUG/pulls/$TRAVIS_PULL_REQUEST -gfb -a -o qa -ogh
 else
     echo "Skipping. No fonts in PR"
 fi
