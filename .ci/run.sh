@@ -9,5 +9,4 @@ then
     gftools qa -pr https://github.com/$TRAVIS_REPO_SLUG/pulls/$TRAVIS_PULL_REQUEST -gfb -a -o qa -ogh
 else
     echo "Skipping. No fonts in PR"
-    return 1
 fi
