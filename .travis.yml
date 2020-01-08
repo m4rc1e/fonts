@@ -19,7 +19,7 @@ before_install:
   - cd ../..
 
 install:
-  - pip install git+https://github.com/googlefonts/gftools
+  - pip install gftools[qa]
 
 script:
   - bash .ci/run.sh
