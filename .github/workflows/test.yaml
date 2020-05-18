@@ -29,8 +29,8 @@ jobs:
           echo ./*_qa
 
       - name: Upload check results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v1
         with:
           name: qa
-          path: ./*_qa/
+          path: out/
 
