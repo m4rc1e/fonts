@@ -1,12 +1,17 @@
 # Only run gftools qa on prs which contain font files.
 
-PR_FILES=https://api.github.com/repos/$TRAVIS_REPO_SLUG/pulls/$TRAVIS_PULL_REQUEST/files
-HAS_FONTS=$(curl -H "Authorization: token $GH_TOKEN" $PR_FILES | jq '[.[] | .filename | test("ttf|otf")] | any')
+# Find directories which contain files that have been altered or added. Also
+# Skip /static directories.
+CHANGED_DIRS=$(git diff master --dirstat | sed "s/[0-9. ].*%//g" | grep -v "static")
 
-if [ "$HAS_FONTS" = true ];
-then
-    echo "Running gftools qa"
-    gftools qa -pr https://github.com/$TRAVIS_REPO_SLUG/pulls/$TRAVIS_PULL_REQUEST -gfb -a -o qa -ogh
-else
-    echo "Skipping. No fonts in PR"
-fi
+for dir in $CHANGED_DIRS
+do
+    font_count=$(ls -1 $dir*.ttf 2>/dev/null | wc -l)
+    if [ $font_count != 0 ]
+    then
+        echo $dir*.ttf
+        gftools qa -f $dir*.ttf -gfb -a -o $(basename $dir)
+    else
+	echo "Skipping $dir. Dir is not a font family project"
+    fi
+done

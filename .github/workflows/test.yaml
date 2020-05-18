@@ -1,0 +1,30 @@
+name: Google Fonts QA
+on: [pull_request]
+
+jobs:
+
+  build:
+    name: Build Google Fonts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup python
+        uses: actions/setup-python@v1
+        with:
+          # TODO use build matrix?
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          sudo apt install libharfbuzz-dev libharfbuzz-bin libfreetype6-dev libglib2.0-dev libcairo2-dev
+          python -m pip install --upgrade pip
+          pip install gftools[qa]
+      - name: Check fonts
+        run: sh .ci/run.sh
+
+        #      - name: Upload check results
+        #        uses: actions/upload-artifact@v1
+        #        with:
+        #          name: fonts
+        #          path: fonts/
+
