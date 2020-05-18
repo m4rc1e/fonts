@@ -9,10 +9,10 @@ do
     font_count=$(ls -1 $dir*.ttf 2>/dev/null | wc -l)
     if [ $font_count != 0 ]
     then
-        echo $dir*.ttf
-        gftools qa -f $dir*.ttf -gfb -a -o $(basename $dir)
+	echo "Checking $dir"
+        gftools qa -f $dir*.ttf -gfb --fontbakery -o $(basename $dir)_qa
     else
-	echo "Skipping $dir. Dir is not a font family project"
+	echo "Skipping $dir. Directory does not contain fonts"
     fi
 done
 
