@@ -1,4 +1,5 @@
-# Only run gftools qa on prs which contain font files.
+# Only run gftools qa on prs which have modified files in directories which
+# contain font binaries.
 
 # Find directories which contain files that have been altered or added. Also
 # Skip /static directories.
@@ -12,7 +13,7 @@ do
     then
 	echo "Checking $dir"
 	mkdir -p $OUT
-        gftools qa -f $dir*.ttf -gfb --fontbakery -o $OUT/$(basename $dir)_qa
+        gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa
     else
 	echo "Skipping $dir. Directory does not contain fonts"
     fi
