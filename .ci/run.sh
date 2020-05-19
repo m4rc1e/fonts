@@ -13,7 +13,18 @@ do
     then
 	echo "Checking $dir"
 	mkdir -p $OUT
-        gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa
+	# If pr contains modified fonts, check with Fontbakery, Diffenator and DiffBrowsers.
+	# If pr doesn't contain modified fonts, just check with Fontbakery.
+	modified_fonts=$(git diff --name-only origin/master HEAD $dir*.ttf)
+	echo $modified_fonts
+	if [ -n "$modified_fonts" ]
+	then
+	    echo "Fonts have been modified. Checking fonts with all tools"
+	    gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa
+	else
+	    echo "Fonts have not been modified. Checking fonts with Fontbakery only"
+	    gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa
+	fi
     else
 	echo "Skipping $dir. Directory does not contain fonts"
     fi
