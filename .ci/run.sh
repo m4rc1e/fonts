@@ -4,7 +4,6 @@
 # Skip /static directories.
 CHANGED_DIRS=$(git diff origin/master HEAD --dirstat | sed "s/[0-9. ].*%//g" | grep -v "static")
 OUT=out
-mkdir $OUT
 
 for dir in $CHANGED_DIRS
 do
@@ -12,6 +11,7 @@ do
     if [ $font_count != 0 ]
     then
 	echo "Checking $dir"
+	mkdir -p $OUT
         gftools qa -f $dir*.ttf -gfb --fontbakery -o $OUT/$(basename $dir)_qa
     else
 	echo "Skipping $dir. Directory does not contain fonts"
