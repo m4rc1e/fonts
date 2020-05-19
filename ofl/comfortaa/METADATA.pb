@@ -1,7 +1,7 @@
 name: "Comfortaa"
 designer: "Johan Aakerlund"
 license: "OFL"
-category: "DISPLAY"
+category: "MONOSPACE"
 date_added: "2011-08-10"
 fonts {
   name: "Comfortaa"
