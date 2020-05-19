@@ -1,7 +1,7 @@
 name: "Amatic SC"
 designer: "Vernon Adams, Ben Nathan, Thomas Jockin"
 license: "OFL"
-category: "HANDWRITING"
+category: "DISPLAY"
 date_added: "2011-10-12"
 fonts {
   name: "Amatic SC"
