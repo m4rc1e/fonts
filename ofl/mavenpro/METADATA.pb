@@ -1,7 +1,7 @@
 name: "Maven Pro"
 designer: "Joe Prince"
 license: "OFL"
-category: "SANS_SERIF"
+category: "DISPLAY"
 date_added: "2011-05-25"
 fonts {
   name: "Maven Pro"
