@@ -6,6 +6,13 @@
 CHANGED_DIRS=$(git diff origin/master --dirstat=files --diff-filter d | sed "s/[0-9. ].*%//g" | grep -v "static")
 OUT=out
 
+echo "***Printing envs***"
+echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+echo "GITHUB_REF: $GITHUB_REF"
+echo "GITHUB_HEAD_REF: $GITHUB_HEAD_REF"
+echo "GITHUB_BASE_REF: $GITHUB_BASE_REF"
+echo "GITHUB_SERVER_URL: $GITHUB_SERVER_URL"
+
 
 for dir in $CHANGED_DIRS
 do
