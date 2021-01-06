@@ -6,15 +6,7 @@
 CHANGED_DIRS=$(git diff origin/master --dirstat=files --diff-filter d | sed "s/[0-9. ].*%//g" | grep -v "static")
 OUT=out
 
-echo "***Printing envs***"
-echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
-echo "GITHUB_REF: $GITHUB_REF"
-echo "GITHUB_HEAD_REF: $GITHUB_HEAD_REF"
-echo "GITHUB_BASE_REF: $GITHUB_BASE_REF"
-echo "GITHUB_SERVER_URL: $GITHUB_SERVER_URL"
-
-echo "pr: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/$PR_NUMBER"
-
+PR_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/$PR_NUMBER"
 
 for dir in $CHANGED_DIRS
 do
@@ -29,10 +21,10 @@ do
 	if [ -n "$modified_fonts" ]
 	then
 	    echo "Fonts have been modified. Checking fonts with all tools"
-	    gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa -ogh
+	    gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
 	else
 	    echo "Fonts have not been modified. Checking fonts with Fontbakery only"
-	    gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa -ogh
+	    gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
 	fi
     else
 	echo "Skipping $dir. Directory does not contain fonts"
