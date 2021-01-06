@@ -8,6 +8,9 @@ OUT=out
 
 PR_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/$PR_NUMBER"
 
+echo "Checking GH exists"
+[[ ! -z "$GH_TOKEN" ]] && echo "exists!" || echo "does not exist!"
+
 for dir in $CHANGED_DIRS
 do
     font_count=$(ls -1 $dir*.ttf 2>/dev/null | wc -l)
