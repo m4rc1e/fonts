@@ -7,6 +7,7 @@ CHANGED_DIRS=$(git diff origin/master --dirstat=files --diff-filter d | sed "s/[
 OUT=out
 
 PR_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/$PR_NUMBER"
+echo "PR url: $PR_URL"
 
 echo "Checking GH exists"
 [[ ! -z "$GH_TOKEN" ]] && echo "exists!" || echo "does not exist!"
