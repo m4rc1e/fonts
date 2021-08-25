@@ -29,8 +29,9 @@ jobs:
         run: |
           sudo apt install libharfbuzz-dev libharfbuzz-bin libfreetype6-dev libglib2.0-dev libcairo2-dev
           python -m pip install --upgrade pip
-          pip install ttfautohint-py
           pip install gftools[qa] pytest
+          pip uninstall fontbakery
+          pip install git+https://github.com/m4rc1e/fontbakery@2e074c0afef66fd8f11f844fdd0e7a45a89d77c8
           
       - name: Check fonts
         env:
