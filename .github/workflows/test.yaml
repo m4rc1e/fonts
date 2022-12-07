@@ -30,7 +30,7 @@ jobs:
           sudo apt install libharfbuzz-dev libharfbuzz-bin libfreetype6-dev libglib2.0-dev libcairo2-dev
           python -m pip install --upgrade pip
           pip install git+https://github.com/googlefonts/diffenator2
-          pip install "gftools[qa]@git+https://github.com/m4rc1e/tools"
+          pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
           # pip install gftools[qa] pytest
           
       - name: Check fonts
