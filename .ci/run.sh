@@ -23,10 +23,18 @@ do
 	if [ -n "$modified_fonts" ]
 	then
 	    echo "Fonts have been modified. Checking fonts with all tools"
-	    gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
+		if [ "$SCREENSHOTS" = true ]; then
+			echo "Hello World"
+		else
+			gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
+		fi
 	else
 	    echo "Fonts have not been modified. Checking fonts with Fontbakery only"
-	    gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
+		if [ "$SCREENSHOTS" = true ]; then
+			echo "Hello World"
+		else
+			gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
+		fi
 	fi
     elif [ ! -z $is_designer_dir ]
     then
