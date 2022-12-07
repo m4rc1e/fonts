@@ -24,6 +24,7 @@ do
 	then
 	    echo "Fonts have been modified. Checking fonts with all tools"
 		if [ "$SCREENSHOTS" = true ]; then
+			diffenator2 proof $dir*.ttf --imgs -o $OUT/$(basename $dir)_qa
 			echo "Hello World"
 		else
 			gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
@@ -31,6 +32,8 @@ do
 	else
 	    echo "Fonts have not been modified. Checking fonts with Fontbakery only"
 		if [ "$SCREENSHOTS" = true ]; then
+			# TODO change this to diff
+			diffenator2 proof $dir*.ttf --imgs -o $OUT/$(basename $dir)_qa
 			echo "Hello World"
 		else
 			gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
