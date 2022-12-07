@@ -24,7 +24,7 @@ do
 	then
 	    echo "Fonts have been modified. Checking fonts with all tools"
 		if [ "$SCREENSHOTS" = true ]; then
-			diffenator2 proof $dir*.ttf --imgs -o $OUT/$(basename $dir)_qa
+			gftools qa -f $dir*.ttf -gfb --diffbrowsers -o $OUT/$(basename $dir)_qa
 			echo "Hello World"
 		else
 			gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
