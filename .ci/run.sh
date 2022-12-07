@@ -24,6 +24,8 @@ do
 	then
 	    echo "Fonts have been modified. Checking fonts with all tools"
 		if [ "$SCREENSHOTS" = true ]; then
+			python -m youseedee 0x078A
+			chromedriver --url-base=/wd/hub &
 			gftools qa -f $dir*.ttf -gfb --diffbrowsers --imgs -o $OUT/$(basename $dir)_qa
 			echo "Hello World"
 		else

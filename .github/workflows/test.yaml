@@ -50,8 +50,6 @@ jobs:
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
         run: |
-          python -m youseedee 0x078A
-          chromedriver --url-base=/wd/hub &
           sh .ci/run.sh
         shell: bash
 
