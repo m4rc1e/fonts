@@ -27,21 +27,29 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo apt install libharfbuzz-dev libharfbuzz-bin libfreetype6-dev libglib2.0-dev libcairo2-dev
           python -m pip install --upgrade pip
           pip install git+https://github.com/googlefonts/diffenator2
           pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
-          # pip install gftools[qa] pytest
+          shell: bash
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@latest
+      - name: Setup Chrome Driver
+        uses: nanasess/setup-chromedriver@master
+      - name: Setup Firefox
+        uses: browser-actions/setup-firefox@latest
+        with:
+          firefox-version: '84.0'
+      - name: Setup Firefox Driver
+        uses: m4rc1e/setup-geckodriver@master
           
       - name: Check fonts
         env:
-          #GF_API_KEY: ${{ secrets.GF_API_KEY }}
-          #BSTACK_ACCESS_KEY: ${{ secrets.BSTACK_ACCESS_KEY }}
-          #BSTACK_USERNAME: ${{ secrets.BSTACK_USERNAME }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
           SCREENSHOTS: true
         run: |
+          python -m youseedee 0x078A
+          chromedriver --url-base=/wd/hub &
           sh .ci/run.sh
       - name: Check file existence
         id: check_files
