@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.9]
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [windows-latest] #[ubuntu-latest, windows-latest, macos-latest]
     steps:
       - name: Cancel previous
         uses: styfle/cancel-workflow-action@0.8.0
