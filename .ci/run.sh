@@ -33,7 +33,8 @@ do
 	    echo "Fonts have not been modified. Checking fonts with Fontbakery only"
 		if [ "$SCREENSHOTS" = true ]; then
 			# TODO change this to diff
-			diffenator2 proof $dir*.ttf --imgs -o $OUT/$(basename $dir)_qa
+			gftools qa -f $dir*.ttf -gfb --diffbrowsers -o $OUT/$(basename $dir)_qa
+			# diffenator2 proof $dir*.ttf --imgs -o $OUT/$(basename $dir)_qa
 			echo "Hello World"
 		else
 			gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
