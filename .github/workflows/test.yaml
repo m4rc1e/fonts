@@ -47,10 +47,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
           SCREENSHOTS: true
+          PYTHONIOENCODING: 'utf-8'
+          PYTHONUTF8: '1'
         run: |
           python -m youseedee 0x078A
           chromedriver --url-base=/wd/hub &
           sh .ci/run.sh
+        shell: bash
+
       - name: Check file existence
         id: check_files
         uses: andstor/file-existence-action@v1
