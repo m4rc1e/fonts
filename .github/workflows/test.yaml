@@ -30,7 +30,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install git+https://github.com/googlefonts/diffenator2
           pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
-          shell: bash
+        shell: bash
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@latest
       - name: Setup Chrome Driver
