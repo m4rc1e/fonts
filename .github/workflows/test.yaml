@@ -29,9 +29,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install git+https://github.com/googlefonts/diffenator2
-          pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
+          python3 -m pip install --upgrade pip
+          pip3 install git+https://github.com/googlefonts/diffenator2
+          pip3 install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
         shell: bash
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@latest
