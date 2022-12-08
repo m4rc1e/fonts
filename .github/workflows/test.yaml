@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip3 install git+https://github.com/googlefonts/diffenator2
+          pip3 install git+https://github.com/m4rc1e/diffenator2
           pip3 install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
         shell: bash
       - name: Setup Chrome
