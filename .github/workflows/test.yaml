@@ -27,25 +27,26 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Install dependencies
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install packages
         run: |
-          python3 -m pip install --upgrade pip
-          pip3 install git+https://github.com/m4rc1e/diffenator2
-          pip3 install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
+          pip install git+https://github.com/googlefonts/diffenator2
+          pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
         shell: bash
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@latest
       - name: Setup Chrome Driver
         uses: nanasess/setup-chromedriver@master
+
       - name: Setup Firefox
         uses: browser-actions/setup-firefox@latest
         with:
           firefox-version: '84.0'
       - name: Setup Firefox Driver
         uses: m4rc1e/setup-geckodriver@master
-      
-      #- name: Setup tmate session
-      #  uses: mxschmitt/action-tmate@v3
           
       - name: Check fonts
         env:
@@ -70,4 +71,3 @@ jobs:
         with:
           name: qa
           path: out/
-
