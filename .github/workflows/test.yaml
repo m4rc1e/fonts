@@ -23,48 +23,10 @@ jobs:
           access_token: ${{ github.token }}
     
       - uses: actions/checkout@v2
+      - uses: f-actions/diffenator2@main
         with:
-          submodules: recursive
-          fetch-depth: 0
-
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Install packages
-        run: |
-          pip install git+https://github.com/m4rc1e/diffenator2
-          pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
-        shell: bash
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@latest
-      - name: Setup Chrome Driver
-        uses: nanasess/setup-chromedriver@v1
-        with:
-          chromedriver-version: '88.0.4324.96'
-
-      - name: Setup Firefox
-        uses: browser-actions/setup-firefox@latest
-        with:
-          firefox-version: '84.0'
-      - name: Setup Firefox Driver
-        uses: m4rc1e/setup-geckodriver@master
-          
-      - name: Check fonts
-        run: |
-          # sh .ci/run.sh
-          echo "starting"
-          export DISPLAY=:99
-          chromedriver --url-base=/wd/hub &
-          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
-          diffenator2 proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          PR_NUMBER: ${{ github.event.number }}
-          SCREENSHOTS: true
-          PYTHONIOENCODING: 'utf-8'
-          PYTHONUTF8: '1'
-        shell: bash
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: "./ofl/mavenpro/MavenPro[wght].ttf"
 
       - name: Check file existence
         id: check_files
