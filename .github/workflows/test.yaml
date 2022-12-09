@@ -49,16 +49,18 @@ jobs:
         uses: m4rc1e/setup-geckodriver@master
           
       - name: Check fonts
+        run: |
+          # sh .ci/run.sh
+          echo "starting"
+          export DISPLAY=:99
+          chromedriver --url-base=/wd/hub &
+          diffenator2 proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
           SCREENSHOTS: true
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
-        run: |
-          # sh .ci/run.sh
-          echo "starting"
-          chromedriver --url-base=/wd/hub & diffenator2 proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
         shell: bash
 
       - name: Check file existence
