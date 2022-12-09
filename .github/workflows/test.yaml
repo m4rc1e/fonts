@@ -46,7 +46,9 @@ jobs:
       - name: Gen Screenshots
         run: |
           python -m youseedee 0x078A
+          export DISPLAY=:99
           chromedriver --url-base=/wd/hub &
+          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
           _diffbrowsers proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
         env:
           PYTHONIOENCODING: 'utf-8'
