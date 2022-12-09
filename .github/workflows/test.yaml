@@ -43,12 +43,14 @@ jobs:
       - name: Setup Firefox Driver
         uses: m4rc1e/setup-geckodriver@master
 
-      - name: Gen Screenshots
+      - name: Run Xvfb
         run: |
           python -m youseedee 0x078A
           export DISPLAY=:99
-          chromedriver --url-base=/wd/hub &
-          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
+          chromedriver --url-base=/wd/hub
+      
+      - name: diff
+        run: |
           _diffbrowsers proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
         env:
           PYTHONIOENCODING: 'utf-8'
