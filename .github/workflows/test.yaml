@@ -56,7 +56,8 @@ jobs:
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
         run: |
-          sh .ci/run.sh
+          # sh .ci/run.sh
+          diffenator2 proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
         shell: bash
 
       - name: Check file existence
