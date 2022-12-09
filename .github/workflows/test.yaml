@@ -47,7 +47,7 @@ jobs:
         run: |
           python -m youseedee 0x078A
           export DISPLAY=:99
-          chromedriver --url-base=/wd/hub
+          DISPLAY=:99 chromedriver --url-base=/wd/hub &
           _diffbrowsers proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
         env:
           PYTHONIOENCODING: 'utf-8'
