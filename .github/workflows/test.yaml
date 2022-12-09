@@ -23,10 +23,44 @@ jobs:
           access_token: ${{ github.token }}
     
       - uses: actions/checkout@v2
-      - uses: f-actions/diffenator2@main
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          path: "./ofl/mavenpro/MavenPro[wght].ttf"
+          python-version: 3.9
+      - name: Install packages
+        run: |
+          pip install git+https://github.com/googlefonts/diffenator2
+        shell: bash
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@latest
+      - name: Setup Chrome Driver
+        uses: nanasess/setup-chromedriver@master
+
+      - name: Setup Firefox
+        uses: browser-actions/setup-firefox@latest
+        with:
+          firefox-version: '84.0'
+      - name: Setup Firefox Driver
+        uses: m4rc1e/setup-geckodriver@master
+
+      - name: Gen Screenshots
+        run: |
+          python -m youseedee 0x078A
+          chromedriver --url-base=/wd/hub &
+          diffenator2 proof ofl/mavenpro/MavenPro[wght].ttf -o out
+        env:
+          PYTHONIOENCODING: 'utf-8'
+          PYTHONUTF8: '1'
+        shell: bash
+
+      - name: Create Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: font-tests
+          path: out
+
+
+
 
       - name: Check file existence
         id: check_files
