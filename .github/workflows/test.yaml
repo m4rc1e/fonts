@@ -33,7 +33,7 @@ jobs:
           python-version: 3.9
       - name: Install packages
         run: |
-          pip install git+https://github.com/googlefonts/diffenator2
+          pip install git+https://github.com/m4rc1e/diffenator2
           pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
         shell: bash
       - name: Setup Chrome
