@@ -57,7 +57,7 @@ jobs:
           PYTHONUTF8: '1'
         run: |
           # sh .ci/run.sh
-          diffenator2 proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
+          chromedriver --url-base=/wd/hub & diffenator2 proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
         shell: bash
 
       - name: Check file existence
