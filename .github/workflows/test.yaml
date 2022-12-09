@@ -45,17 +45,17 @@ jobs:
 
       - name: Run Xvfb
         run: |
+          mkdir out
           python -m youseedee 0x078A
-          export DISPLAY=:99
-          DISPLAY=:99 chromedriver --url-base=/wd/hub &
-          _diffbrowsers proof ofl/mavenpro/MavenPro[wght].ttf --imgs -o out
+          chromedriver --url-base=/wd/hub &
+          python test2.py
         env:
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
         shell: bash
       
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+      #- name: Setup tmate session
+      #  uses: mxschmitt/action-tmate@v3
 
       - name: Create Artifacts
         uses: actions/upload-artifact@v2
