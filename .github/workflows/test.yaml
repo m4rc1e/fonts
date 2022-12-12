@@ -22,7 +22,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
     
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
@@ -30,7 +30,7 @@ jobs:
       - name: Install packages
         run: |
           pip install git+https://github.com/m4rc1e/diffenator2
-          pip install gftools[qa]
+          pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
         shell: bash
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@latest
