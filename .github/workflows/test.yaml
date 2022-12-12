@@ -53,6 +53,7 @@ jobs:
         env:
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
+          SCREENSHOTS: true
         shell: bash
       
       #- name: Setup tmate session
