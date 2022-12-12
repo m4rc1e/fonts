@@ -4,4 +4,6 @@ import os
 s = ScreenShotter()
 s.take("https://www.google.com", "out")
 
-s.take("test.html", "out")
+fp = os.path.abspath("test.html")
+fp = "file:///" + fp
+s.take(fp, "out")
