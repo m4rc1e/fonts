@@ -3,6 +3,9 @@
 
 # Find directories which contain files that have been altered or added. Also
 # Skip /static directories.
+echo $(git remote -v)
+echo "......"
+echo $(git branch)
 CHANGED_DIRS=$(git diff origin/main --dirstat=files --diff-filter d | sed "s/[0-9. ].*%//g" | grep -v "static")
 OUT=out
 
