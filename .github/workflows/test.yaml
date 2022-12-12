@@ -30,6 +30,7 @@ jobs:
       - name: Install packages
         run: |
           pip install git+https://github.com/m4rc1e/diffenator2
+          pip install gftools[qa]
         shell: bash
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@latest
@@ -48,8 +49,7 @@ jobs:
           mkdir out
           python -m youseedee 0x078A
           chromedriver --url-base=/wd/hub &
-          python test2.py
-          _diffbrowsers proof ofl/adamina/Adamina-Regular.ttf --imgs -o out
+          sh .ci/run.sh
         env:
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
