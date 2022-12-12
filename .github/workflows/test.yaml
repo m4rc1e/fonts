@@ -55,8 +55,8 @@ jobs:
           PYTHONUTF8: '1'
         shell: bash
       
-      #- name: Setup tmate session
-      #  uses: mxschmitt/action-tmate@v3
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
 
       - name: Create Artifacts
         uses: actions/upload-artifact@v2
