@@ -96,6 +96,7 @@ jobs:
       - name: Run Diffenator
         run: |
           mkdir out
+          python -m youseedee 0x078A
           sh .ci/run.sh
         env:
           PYTHONIOENCODING: 'utf-8'
