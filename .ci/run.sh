@@ -29,11 +29,11 @@ do
 			if [ "$SCREENSHOTS" = true ]; then
 				gftools qa -f $dir*.ttf -gfb --diffbrowsers --imgs -o $OUT/$(basename $dir)_qa
 			else
-				gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
+				gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa #--out-url $PR_URL
 			fi
 		else
 			echo "Fonts have not been modified. Checking fonts with Fontbakery only"
-				gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
+				gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa #--out-url $PR_URL
 		fi
 		elif [ ! -z $is_designer_dir ]
 		then
