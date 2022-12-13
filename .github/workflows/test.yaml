@@ -90,6 +90,9 @@ jobs:
           pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
         shell: bash
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Run Diffenator
         run: |
           mkdir out

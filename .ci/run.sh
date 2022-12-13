@@ -3,9 +3,6 @@
 
 # Find directories which contain files that have been altered or added. Also
 # Skip /static directories.
-echo $(git remote -v)
-echo "......"
-echo $(git branch)
 CHANGED_DIRS=$(git diff origin/main --dirstat=files --diff-filter d | sed "s/[0-9. ].*%//g" | grep -v "static")
 OUT=out
 
@@ -29,7 +26,7 @@ do
 			if [ "$SCREENSHOTS" = true ]; then
 				gftools qa -f $dir*.ttf -gfb --diffbrowsers --imgs -o $OUT/$(basename $dir)_qa
 			else
-				gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa #--out-url $PR_URL
+				gftools qa -f $dir*.ttf -gfb --diffenator --fontbakery -o $OUT/$(basename $dir)_qa #--out-url $PR_URL
 			fi
 		else
 			echo "Fonts have not been modified. Checking fonts with Fontbakery only"
