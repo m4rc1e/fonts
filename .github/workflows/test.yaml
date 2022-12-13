@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  build:
+  diffbrowsers:
     name: Build Google Fonts
     runs-on: ${{ matrix.os }}
     strategy:
@@ -56,15 +56,49 @@ jobs:
           SCREENSHOTS: true
         shell: bash
       
-      #- name: Setup tmate session
-      #  uses: mxschmitt/action-tmate@v3
-
-      - name: Create Artifacts
-        uses: actions/upload-artifact@v2
+      - name: Check file existence
+        id: check_files
+        uses: andstor/file-existence-action@v1
         with:
-          name: font-tests
-          path: out
+          files: "out"
 
+      - name: Upload check results
+        if: steps.check_files.outputs.files_exists == 'true'
+        uses: actions/upload-artifact@v1
+        with:
+          name: qa
+          path: out/
+
+  diffenator:
+    name: Diffenate fonts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel previous
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+    
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install packages
+        run: |
+          pip install git+https://github.com/m4rc1e/diffenator2
+          pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
+        shell: bash
+
+      - name: Run Diffenator
+        run: |
+          mkdir out
+          sh .ci/run.sh
+        env:
+          PYTHONIOENCODING: 'utf-8'
+          PYTHONUTF8: '1'
+        shell: bash
+      
       - name: Check file existence
         id: check_files
         uses: andstor/file-existence-action@v1
