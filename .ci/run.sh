@@ -27,8 +27,7 @@ do
 		then
 			echo "Fonts have been modified. Checking fonts with all tools"
 			if [ "$SCREENSHOTS" = true ]; then
-				mkdir -p $OUT/$(basename $dir)_qa/diffbrowsers
-				gftools qa -f $dir*.ttf -gfb --diffbrowsers --imgs -o $OUT/$(basename $dir)_qa/diffbrowsers
+				gftools qa -f $dir*.ttf -gfb --diffbrowsers --imgs -o $OUT/$(basename $dir)_qa
 			else
 				gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
 			fi
