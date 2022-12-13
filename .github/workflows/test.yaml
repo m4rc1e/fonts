@@ -90,9 +90,6 @@ jobs:
           pip install "gftools[qa]@git+https://github.com/m4rc1e/tools@qa-diffenator2"
         shell: bash
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
       - name: Run Diffenator
         run: |
           mkdir out
@@ -101,6 +98,7 @@ jobs:
         env:
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         shell: bash
       
       - name: Check file existence
