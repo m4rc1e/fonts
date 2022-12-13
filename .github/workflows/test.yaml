@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.9]
-        os: [ubuntu-latest] #[ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - name: Cancel previous
         uses: styfle/cancel-workflow-action@0.8.0
@@ -44,7 +44,7 @@ jobs:
       - name: Setup Firefox Driver
         uses: m4rc1e/setup-geckodriver@master
 
-      - name: Run Xvfb
+      - name: Run Diffbrowsers
         run: |
           mkdir out
           python -m youseedee 0x078A
@@ -64,9 +64,6 @@ jobs:
         with:
           name: font-tests
           path: out
-
-
-
 
       - name: Check file existence
         id: check_files

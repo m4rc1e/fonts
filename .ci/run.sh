@@ -18,37 +18,30 @@ do
     is_designer_dir=$(echo $dir | grep "designers")
     if [ $font_count != 0 ]
     then
-	echo "Checking $dir"
-	mkdir -p $OUT
-	# If pr contains modified fonts, check with Fontbakery, Diffenator and DiffBrowsers.
-	# If pr doesn't contain modified fonts, just check with Fontbakery.
-	modified_fonts=$(git diff --name-only origin/main HEAD $dir*.ttf)
-	if [ -n "$modified_fonts" ]
-	then
-	    echo "Fonts have been modified. Checking fonts with all tools"
-		if [ "$SCREENSHOTS" = true ]; then
-			gftools qa -f $dir*.ttf -gfb --diffbrowsers --imgs -o $OUT/$(basename $dir)_qa
-			echo "Hello World"
+		echo "Checking $dir"
+		mkdir -p $OUT
+		# If pr contains modified fonts, check with Fontbakery, Diffenator and DiffBrowsers.
+		# If pr doesn't contain modified fonts, just check with Fontbakery.
+		modified_fonts=$(git diff --name-only origin/main HEAD $dir*.ttf)
+		if [ -n "$modified_fonts" ]
+		then
+			echo "Fonts have been modified. Checking fonts with all tools"
+			if [ "$SCREENSHOTS" = true ]; then
+				mkdir -p $OUT/$(basename $dir)_qa/diffbrowsers
+				gftools qa -f $dir*.ttf -gfb --diffbrowsers --imgs -o $OUT/$(basename $dir)_qa/diffbrowsers
+			else
+				gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
+			fi
 		else
-			gftools qa -f $dir*.ttf -gfb -a -o $OUT/$(basename $dir)_qa --out-url $PR_URL
+			echo "Fonts have not been modified. Checking fonts with Fontbakery only"
+				gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
 		fi
-	else
-	    echo "Fonts have not been modified. Checking fonts with Fontbakery only"
-		if [ "$SCREENSHOTS" = true ]; then
-			# TODO change this to diff
-			gftools qa -f $dir*.ttf -gfb --diffbrowsers -o $OUT/$(basename $dir)_qa
-			# diffenator2 proof $dir*.ttf --imgs -o $OUT/$(basename $dir)_qa
-			echo "Hello World"
+		elif [ ! -z $is_designer_dir ]
+		then
+			echo "Checking designer profile"
+			pytest .ci/test_profiles.py $dir
 		else
-			gftools qa -f $dir*.ttf --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
-		fi
-	fi
-    elif [ ! -z $is_designer_dir ]
-    then
-        echo "Checking designer profile"
-        pytest .ci/test_profiles.py $dir
-    else
-	echo "Skipping $dir. Directory does not contain fonts"
+			echo "Skipping $dir. Directory does not contain fonts"
     fi
 done
 
