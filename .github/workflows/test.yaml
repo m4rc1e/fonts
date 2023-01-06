@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.9]
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [windows-latest] #[ubuntu-latest, windows-latest, macos-latest]
     steps:
       - name: Cancel previous
         uses: styfle/cancel-workflow-action@0.11.0
@@ -54,6 +54,9 @@ jobs:
           PYTHONUTF8: '1'
           SCREENSHOTS: true
         shell: bash
+
+      - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
       
       - name: Check file existence
         id: check_files
