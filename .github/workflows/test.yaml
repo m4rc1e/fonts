@@ -14,7 +14,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: [3.10]
+        python-version: ['3.10']
         os: [windows-latest] 
     steps:
       - name: Cancel previous
@@ -26,7 +26,7 @@ jobs:
       - name: Set up Python 3.10
         uses: actions/setup-python@v4.4.0
         with:
-          python-version: 3.10
+          python-version: '3.10'
       - name: Install packages
         run: |
           pip install "gftools[qa]@git+https://github.com/googlefonts/gftools@main"
@@ -82,7 +82,7 @@ jobs:
       - name: Set up Python 3.10
         uses: actions/setup-python@v4.4.0
         with:
-          python-version: 3.10
+          python-version: '3.10'
       - name: Install packages
         run: |
           pip install --upgrade pip
