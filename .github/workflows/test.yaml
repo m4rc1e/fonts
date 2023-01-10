@@ -97,7 +97,7 @@ jobs:
         env:
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.number }}
         shell: bash
       
