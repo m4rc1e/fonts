@@ -53,6 +53,7 @@ jobs:
           PYTHONIOENCODING: 'utf-8'
           PYTHONUTF8: '1'
           SCREENSHOTS: true
+          GH_TOKEN: ${{ github.token }}
         shell: bash
 
       - name: Check file existence
