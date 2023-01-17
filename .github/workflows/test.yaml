@@ -43,18 +43,13 @@ jobs:
       - name: Setup Firefox Driver
         uses: m4rc1e/setup-geckodriver@master
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+#      - name: Setup tmate session
+#        uses: mxschmitt/action-tmate@v3
 
       - name: Run Diffbrowsers
         run: |
-          mkdir out
-          python -m youseedee 0x078A
-          chromedriver --url-base=/wd/hub &
           sh .ci/run.sh
         env:
-          PYTHONIOENCODING: 'utf-8'
-          PYTHONUTF8: '1'
           SCREENSHOTS: true
           GH_TOKEN: ${{ github.token }}
         shell: bash
