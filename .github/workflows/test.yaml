@@ -43,8 +43,8 @@ jobs:
       - name: Setup Firefox Driver
         uses: m4rc1e/setup-geckodriver@master
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+#      - name: Setup tmate session
+#        uses: mxschmitt/action-tmate@v3
 
       - name: Run Diffbrowsers
         run: |
