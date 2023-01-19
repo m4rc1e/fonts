@@ -48,7 +48,6 @@ jobs:
 
       - name: Run Diffbrowsers
         run: |
-          chromedriver --url-base=/wd/hub &
           sh .ci/run.sh
         env:
           SCREENSHOTS: true
