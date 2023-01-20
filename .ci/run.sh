@@ -25,7 +25,11 @@ do
 			echo "Fonts have been modified. Checking fonts with all tools"
 			if [ "$SCREENSHOTS" = true ]; then 
 				chromedriver --url-base=/wd/hub &
-				_diffbrowsers proof ofl/labrada/*.ttf --pt-size 20 --imgs --filter-styles "Black|Thin Italic|ExtraLight Italic|Light Italic" -o $OUT/$(basename $dir)_qa
+				_diffbrowsers proof /Users/marcfoley/Type/fonts/ofl/labrada/Labrada-Italic[wght].ttf /Users/marcfoley/Type/fonts/ofl/labrada/Labrada[wght].ttf -o 'out/Medium Italic-SemiBold Italic-Bold Italic-ExtraBold Italic' -pt 20 --imgs --filter-styles "Medium Italic|SemiBold Italic|Bold Italic|ExtraBold Italic"
+				_diffbrowsers proof /Users/marcfoley/Type/fonts/ofl/labrada/Labrada-Italic[wght].ttf /Users/marcfoley/Type/fonts/ofl/labrada/Labrada[wght].ttf -o 'out/Black Italic-Thin-ExtraLight-Light' -pt 20 --imgs --filter-styles "Black Italic|Thin|ExtraLight|Light"
+				_diffbrowsers proof /Users/marcfoley/Type/fonts/ofl/labrada/Labrada-Italic[wght].ttf /Users/marcfoley/Type/fonts/ofl/labrada/Labrada[wght].ttf -o out/Regular-Medium-SemiBold-Bold -pt 20 --imgs --filter-styles "Regular|Medium|SemiBold|Bold"
+				_diffbrowsers proof /Users/marcfoley/Type/fonts/ofl/labrada/Labrada-Italic[wght].ttf /Users/marcfoley/Type/fonts/ofl/labrada/Labrada[wght].ttf -o out/ExtraBold-Black -pt 20 --imgs --filter-styles "ExtraBold|Black"
+
 				#gftools qa -f $dir*.ttf -gfb --render --imgs -o $OUT/$(basename $dir)_qa
 			else
 				gftools qa -f $dir*.ttf -gfb --diffenator --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
