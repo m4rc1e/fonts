@@ -25,7 +25,8 @@ do
 			echo "Fonts have been modified. Checking fonts with all tools"
 			if [ "$SCREENSHOTS" = true ]; then 
 				chromedriver --url-base=/wd/hub &
-				gftools qa -f $dir*.ttf -gfb --render --imgs -o $OUT/$(basename $dir)_qa
+				_diffbrowsers proof ofl/mavenpro/*.ttf --pt-size 20 --imgs --filter-styles "Regular|Bold|SemiBold|ExtraBold"
+				#gftools qa -f $dir*.ttf -gfb --render --imgs -o $OUT/$(basename $dir)_qa
 			else
 				gftools qa -f $dir*.ttf -gfb --diffenator --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
 			fi
