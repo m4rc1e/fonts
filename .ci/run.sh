@@ -23,7 +23,7 @@ do
 		if [ -n "$modified_fonts" ]
 		then
 			echo "Fonts have been modified. Checking fonts with all tools"
-			if [ "$SCREENSHOTS" = true ]; then 
+			if [ "$SCREENSHOTS" = true ]; then
 				chromedriver --url-base=/wd/hub &
 				gftools qa -f $dir*.ttf -gfb --render --imgs -o $OUT/$(basename $dir)_qa
 			else
