@@ -25,8 +25,7 @@ do
 			echo "Fonts have been modified. Checking fonts with all tools"
 			if [ "$SCREENSHOTS" = true ]; then
 				chromedriver --url-base=/wd/hub &
-				_diffbrowsers diff -fb $dir*.ttf -fa $dir*.ttf --imgs -o $OUT/$(basename $dir)_qa
-				#gftools qa -f $dir*.ttf -gfb --render --imgs -o $OUT/$(basename $dir)_qa
+				gftools qa -f $dir*.ttf -gfb --render --imgs -o $OUT/$(basename $dir)_qa
 			else
 				gftools qa -f $dir*.ttf -gfb --diffenator --fontbakery -o $OUT/$(basename $dir)_qa --out-url $PR_URL
 			fi
