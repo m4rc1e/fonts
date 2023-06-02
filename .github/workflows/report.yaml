@@ -4,9 +4,9 @@ name: Google Fonts Report
 on:
   schedule:
     # Every Monday at 12am
-    - cron:  '0 0 * * 1'
+    #- cron:  '0 0 * * 1'
     # for testing every 5th minute e.g 1:05, 1:10, 1:15...
-    #- cron: '1/5 * * * *'
+    - cron: '1/5 * * * *'
 
 
 jobs:
@@ -23,8 +23,6 @@ jobs:
     - name: Install dependencies
       run: pip install gftools[qa]
     - name: Generate report
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         mkdir out
         gftools push-stats . out/index.html
