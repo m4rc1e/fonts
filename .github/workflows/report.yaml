@@ -25,11 +25,11 @@ jobs:
         python-version: "3.8"
     - name: Install dependencies
       run: pip install gftools[qa]
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
+    #- name: Setup tmate session
+    #  uses: mxschmitt/action-tmate@v3
     - name: Generate report
       env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         mkdir out
         gftools push-stats . out/index.html
