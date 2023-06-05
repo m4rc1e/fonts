@@ -29,7 +29,7 @@ jobs:
     #  uses: mxschmitt/action-tmate@v3
     - name: Generate report
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         mkdir out
         gftools push-stats . out/index.html
