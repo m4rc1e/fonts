@@ -1,5 +1,5 @@
 {
-    "last_run": "2023-06-26",
+    "last_run": "2023-07-03",
     "issues": [
         {
             "date": "2015-03-16",
@@ -5999,7 +5999,7 @@
         {
             "date": "2020-02-28",
             "title": "Add Elstob font family",
-            "closed": true
+            "closed": false
         },
         {
             "date": "2020-02-28",
@@ -9374,7 +9374,7 @@
         {
             "date": "2021-09-01",
             "title": "Upgrade Signika with GRAD axis",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2021-09-01",
@@ -10048,17 +10048,17 @@
         },
         {
             "date": "2021-12-01",
+            "title": "Update Baskervville",
+            "closed": true
+        },
+        {
+            "date": "2021-12-01",
             "title": "Add Joan",
             "closed": true
         },
         {
             "date": "2021-12-01",
             "title": "Crimson Text no longer available",
-            "closed": true
-        },
-        {
-            "date": "2021-12-01",
-            "title": "Update Baskervville",
             "closed": true
         },
         {
@@ -11734,7 +11734,7 @@
         {
             "date": "2022-09-15",
             "title": "Update Nuosu SIL",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2022-09-16",
@@ -12659,7 +12659,7 @@
         {
             "date": "2023-02-08",
             "title": "slow_motion_video icon is missing in Material Icons.",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-02-09",
@@ -13384,7 +13384,7 @@
         {
             "date": "2023-05-09",
             "title": "Missing `assignment_add` material-icon for `outlined`",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-05-09",
@@ -13463,13 +13463,13 @@
         },
         {
             "date": "2023-05-24",
-            "title": "New! Catamaran also Hebrew version 3.0",
+            "title": "New! Add Surety (Catamaran Hebrew Fork)",
             "closed": false
         },
         {
             "date": "2023-05-24",
             "title": "Material Symbols some icon download wrong SVG/PNG",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-05-25",
@@ -13604,7 +13604,7 @@
         {
             "date": "2023-06-21",
             "title": "Update Bangers",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-06-21",
@@ -13704,11 +13704,61 @@
         {
             "date": "2023-06-24",
             "title": "\u06a9\u0627\u0644\u06cc\u0628\u0631\u06cc",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-06-24",
             "title": "Filter fonts by preview text",
+            "closed": false
+        },
+        {
+            "date": "2023-06-26",
+            "title": "Text specimen length on Akatab family",
+            "closed": true
+        },
+        {
+            "date": "2023-06-27",
+            "title": "Add Ruwudu (SIL)",
+            "closed": false
+        },
+        {
+            "date": "2023-06-27",
+            "title": "Form",
+            "closed": true
+        },
+        {
+            "date": "2023-06-27",
+            "title": "Font Issue: Bungee Spice - Number \"4\" hanging line",
+            "closed": true
+        },
+        {
+            "date": "2023-06-28",
+            "title": "Change icon color for material icons/symbols when downloading as .svg and .png",
+            "closed": true
+        },
+        {
+            "date": "2023-06-29",
+            "title": "/ofl/notoemoji is missing",
+            "closed": false
+        },
+        {
+            "date": "2023-06-29",
+            "title": "Update Noto Sans Symbols 2",
+            "closed": false
+        },
+        {
+            "date": "2023-06-30",
+            "title": "Update BioRhyme Expanded",
+            "closed": false
+        },
+        {
+            "date": "2023-07-01",
+            "title": "Please add a personal font library",
+            "closed": false
+        },
+        {
+            "date": "2023-07-01",
+            "title": "Add VCR OSD Mono",
             "closed": false
         }
     ],
