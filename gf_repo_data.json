@@ -1,5 +1,5 @@
 {
-    "last_run": "2023-07-03",
+    "last_run": "2023-07-10",
     "issues": [
         {
             "date": "2015-03-16",
@@ -4054,7 +4054,7 @@
         {
             "date": "2018-05-25",
             "title": "Add Objective",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2018-05-25",
@@ -8099,7 +8099,7 @@
         {
             "date": "2021-02-26",
             "title": "Add REM font",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2021-02-26",
@@ -13444,12 +13444,12 @@
         {
             "date": "2023-05-20",
             "title": "Update Sen",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-05-22",
             "title": "Adding option to favorite font in google font",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-05-23",
@@ -13479,7 +13479,7 @@
         {
             "date": "2023-05-27",
             "title": "Review Zero Original Policy",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-05-27",
@@ -13719,7 +13719,7 @@
         {
             "date": "2023-06-27",
             "title": "Add Ruwudu (SIL)",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-06-27",
@@ -13754,11 +13754,91 @@
         {
             "date": "2023-07-01",
             "title": "Please add a personal font library",
-            "closed": false
+            "closed": true
         },
         {
             "date": "2023-07-01",
             "title": "Add VCR OSD Mono",
+            "closed": true
+        },
+        {
+            "date": "2023-07-04",
+            "title": "Add Dai Banna SIL (SIL)",
+            "closed": true
+        },
+        {
+            "date": "2023-07-04",
+            "title": "Add Namdhinggo (SIL)",
+            "closed": true
+        },
+        {
+            "date": "2023-07-04",
+            "title": "Add Chaumont Script",
+            "closed": false
+        },
+        {
+            "date": "2023-07-04",
+            "title": "Add Courier Badi",
+            "closed": false
+        },
+        {
+            "date": "2023-07-05",
+            "title": "Emoji fonts",
+            "closed": true
+        },
+        {
+            "date": "2023-07-05",
+            "title": "Update Oswald [Vernon Adams]",
+            "closed": false
+        },
+        {
+            "date": "2023-07-05",
+            "title": "Add Borel",
+            "closed": true
+        },
+        {
+            "date": "2023-07-05",
+            "title": "Add BoutiqueBitmap7x7",
+            "closed": false
+        },
+        {
+            "date": "2023-07-05",
+            "title": "Add BoutiqueBitmap9x9",
+            "closed": false
+        },
+        {
+            "date": "2023-07-05",
+            "title": "Add Lisu Bosa (SIL)",
+            "closed": true
+        },
+        {
+            "date": "2023-07-05",
+            "title": "Add LXGW Marker Gothic",
+            "closed": false
+        },
+        {
+            "date": "2023-07-06",
+            "title": "Add Danfo",
+            "closed": false
+        },
+        {
+            "date": "2023-07-06",
+            "title": "IBM Plex Serif does not include slashed zero variant",
+            "closed": true
+        },
+        {
+            "date": "2023-07-07",
+            "title": "Update David Libre",
+            "closed": false
+        },
+        {
+            "date": "2023-07-07",
+            "title": "Mulish - weird result when using -webkit-text-stroke",
+            "closed": true
+        },
+        {
+            "date": "2023-07-08",
+            "title": "Add Kreadon",
             "closed": false
         }
     ],
