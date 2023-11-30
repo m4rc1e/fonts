@@ -107,7 +107,7 @@ def main():
             if not args.pr_url_body.endswith("/"):
                 args.pr_url_body += "/"
             url = "%s%s" % (args.pr_url_body, args.pr_number)
-            qa_cmd_prefix += ["--out-url", url]
+            #qa_cmd_prefix += ["--out-url", url]
 
         if args.render and check_type == CheckType.NEW_FAMILY:
             print(f"Rendering new family: {directory}")
