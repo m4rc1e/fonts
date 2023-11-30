@@ -89,7 +89,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install --pre fontbakery[googlefonts]
-          pip install git+https://github.com/googlefonts/gftools.git@qa-mm[qa] pytest
+          pip install "gftools[qa] @ git+https://github.com/googlefonts/gftools@qa-mm"
         shell: bash
 
       - name: Run Diffenator and Fontbakery
