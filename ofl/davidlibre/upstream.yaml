@@ -1,0 +1,28 @@
+
+# Url to family upstream e.g https://github.com/googlefonts/roboto-classic
+repository_url: https://github.com/meirsadan/david-libre
+
+# Some font upstream store fonts in a github release zip file. Add
+# the url to the zip file here e.g for Roboto-Classic
+# https://github.com/googlefonts/roboto-classic/releases/download/v3.009/Roboto_v3.009.zip
+# archive:
+
+# Designer of family. Seperate multiple designers with a comma e.g
+# Christian Robertson, Paratype, Font Bureau
+designer: Monotype Imaging Inc., SIL International, Meir Sadan 
+
+# branch to get files from (defaults to main). Note older upstreams may use "master"
+branch: main
+
+# Family category. Choose one (SANS_SERIF, SERIF, MONOSPACE, HANDWRITTEN, DISPLAY)
+category: SERIF
+
+# Files to package. Fonts are usually stored in the upstream's fonts/ dir
+files:
+    OFL.txt: OFL.txt
+    fonts/ttf/DavidLibre-Regular.ttf: DavidLibre-Regular.ttf
+    fonts/ttf/DavidLibre-Medium.ttf: DavidLibre-Medium.ttf
+    fonts/ttf/DavidLibre-Bold.ttf: DavidLibre-Bold.ttf
+
+# Some projects include a minisite.
+# minisite_url: 
