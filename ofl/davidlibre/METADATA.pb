@@ -9,17 +9,8 @@ fonts {
   weight: 400
   filename: "DavidLibre-Regular.ttf"
   post_script_name: "DavidLibre-Regular"
-  full_name: "DavidLibre-Regular"
-  copyright: "Copyright (c) 2014 Monotype Imaging Inc. (licensing@monotype.com). All Rights Reserved. David Hadash is a trademark of Monotype Imaging Inc. Reserved Font Name \'Hadash\'. Copyright (c) 2003-2008 SIL International (http://www.sil.org/), with Reserved Font Names \'Gentium\' and \'SIL\'. Copyright (c) 2015-2016 Meir Sadan (meir@sadan.com)."
-}
-fonts {
-  name: "David Libre"
-  style: "normal"
-  weight: 500
-  filename: "DavidLibre-Medium.ttf"
-  post_script_name: "DavidLibre-Medium"
-  full_name: "DavidLibre-Medium"
-  copyright: "Copyright (c) 2014 Monotype Imaging Inc. (licensing@monotype.com). All Rights Reserved. David Hadash is a trademark of Monotype Imaging Inc. Reserved Font Name \'Hadash\'. Copyright (c) 2003-2008 SIL International (http://www.sil.org/), with Reserved Font Names \'Gentium\' and \'SIL\'. Copyright (c) 2015-2016 Meir Sadan (meir@sadan.com)."
+  full_name: "David Libre Regular"
+  copyright: "Copyright 2016 The David Libre Project Authors (https://github.com/meirsadan/david-libre), with reserved font name \"Hadash\", \"Gentium\" and \'SIL\'."
 }
 fonts {
   name: "David Libre"
@@ -28,14 +19,19 @@ fonts {
   filename: "DavidLibre-Bold.ttf"
   post_script_name: "DavidLibre-Bold"
   full_name: "David Libre Bold"
-  copyright: "Copyright (c) 2014 Monotype Imaging Inc. (licensing@monotype.com). All Rights Reserved. David Hadash is a trademark of Monotype Imaging Inc. Reserved Font Name \'Hadash\'. Copyright (c) 2003-2008 SIL International (http://www.sil.org/), with Reserved Font Names \'Gentium\' and \'SIL\'. Copyright (c) 2015-2016 Meir Sadan (meir@sadan.com)."
+  copyright: "Copyright 2016 The David Libre Project Authors (https://github.com/meirsadan/david-libre), with reserved font name \"Hadash\", \"Gentium\" and \'SIL\'."
 }
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "hebrew"
 subsets: "latin"
 subsets: "latin-ext"
+subsets: "math"
 subsets: "menu"
+subsets: "symbols"
 subsets: "vietnamese"
 source {
   repository_url: "https://github.com/meirsadan/david-libre"
+  commit: "15496c1be77e35f3fa3d0df14a2c2c6f9adfd297"
 }
 primary_script: "Hebr"
