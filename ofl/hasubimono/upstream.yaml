@@ -1,0 +1,35 @@
+
+family: Hasubi Mono
+license: ofl
+# Url to family upstream e.g https://github.com/googlefonts/roboto-classic
+repository_url: https://github.com/eliheuer/hasubi-mono
+
+# Some font upstream store fonts in a github release zip file. Add
+# the url to the zip file here e.g for Roboto-Classic
+# https://github.com/googlefonts/roboto-classic/releases/download/v3.009/Roboto_v3.009.zip
+# archive:
+
+# Designers of family. Please ensure the most important designers are listed first e.g
+# designer:
+# - Dave Crossland
+# - Felipe Sanches
+designer:
+- Eli Heuer
+
+# branch to get files from (defaults to main). Note older upstreams may use "master"
+branch: main
+
+# Family category. Choose one (SANS_SERIF, SERIF, MONOSPACE, HANDWRITTEN, DISPLAY)
+category: SANS_SERIF
+
+# Files to package. Fonts are usually stored in the upstream's fonts/ dir
+files:
+  OFL.txt: OFL.txt
+  fonts/variable/Hasubi-Mono[wght].ttf: Hasubi-Mono[wght].ttf
+
+# Some projects include a minisite. if one exists for your project, uncomment the field
+# and add it
+# minisite_url: 
+
+# For families with multiple writing systems, we need to set the primary script
+# primary_script:  
