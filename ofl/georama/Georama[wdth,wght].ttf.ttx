@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ttFont sfntVersion="\x00\x01\x00\x00" ttLibVersion="4.33">
+
+  <fvar>
+
+    <!-- Width -->
+    <Axis>
+      <AxisTag>wdth</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>62.5</MinValue>
+      <DefaultValue>62.5</DefaultValue>
+      <MaxValue>150.0</MaxValue>
+      <AxisNameID>256</AxisNameID>
+    </Axis>
+
+    <!-- Weight -->
+    <Axis>
+      <AxisTag>wght</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>100.0</MinValue>
+      <DefaultValue>100.0</DefaultValue>
+      <MaxValue>900.0</MaxValue>
+      <AxisNameID>257</AxisNameID>
+    </Axis>
+
+    <!-- Thin -->
+    <NamedInstance flags="0x0" subfamilyNameID="294">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="100.0"/>
+    </NamedInstance>
+
+    <!-- ExtraLight -->
+    <NamedInstance flags="0x0" subfamilyNameID="295">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="200.0"/>
+    </NamedInstance>
+
+    <!-- Light -->
+    <NamedInstance flags="0x0" subfamilyNameID="296">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="300.0"/>
+    </NamedInstance>
+
+    <!-- Regular -->
+    <NamedInstance flags="0x0" subfamilyNameID="297">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="400.0"/>
+    </NamedInstance>
+
+    <!-- Medium -->
+    <NamedInstance flags="0x0" subfamilyNameID="298">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="500.0"/>
+    </NamedInstance>
+
+    <!-- SemiBold -->
+    <NamedInstance flags="0x0" subfamilyNameID="299">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="600.0"/>
+    </NamedInstance>
+
+    <!-- Bold -->
+    <NamedInstance flags="0x0" subfamilyNameID="300">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="700.0"/>
+    </NamedInstance>
+
+    <!-- ExtraBold -->
+    <NamedInstance flags="0x0" subfamilyNameID="301">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="800.0"/>
+    </NamedInstance>
+
+    <!-- Black -->
+    <NamedInstance flags="0x0" subfamilyNameID="302">
+      <coord axis="wdth" value="75.0"/>
+      <coord axis="wght" value="900.0"/>
+    </NamedInstance>
+  </fvar>
+
+</ttFont>
