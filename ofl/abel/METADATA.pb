@@ -14,3 +14,16 @@ fonts {
 }
 subsets: "latin"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/m4rc1e/abel"
+  commit: "1661199f3e601ebde281e66a1ebbd2e3494209c1"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "old/version-1.002/Abel-Regular.ttf"
+    dest_file: "Abel-Regular.ttf"
+  }
+  branch: "master"
+}
