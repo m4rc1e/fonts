@@ -21,6 +21,7 @@ fonts {
   full_name: "Glory Thin Italic"
   copyright: "Copyright 2016-2020 The Glory Project Authors (https://github.com/googlefonts/glory)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -29,6 +30,27 @@ axes {
   tag: "wght"
   min_value: 100.0
   max_value: 800.0
+}
+source {
+  repository_url: "https://github.com/googlefonts/glory"
+  commit: "76ea446c0499989af653f75c1cbd80447ef955d6"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "fonts/variable/Glory-Italic[wght].ttf"
+    dest_file: "Glory-Italic[wght].ttf"
+  }
+  files {
+    source_file: "fonts/variable/Glory[wght].ttf"
+    dest_file: "Glory[wght].ttf"
+  }
+  branch: "master"
 }
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
