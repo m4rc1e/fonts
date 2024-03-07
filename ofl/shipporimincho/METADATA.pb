@@ -48,7 +48,45 @@ fonts {
   full_name: "Shippori Mincho ExtraBold"
   copyright: "Copyright 2021 The Shippori Mincho Project Authors (https://github.com/fontdasu/ShipporiMincho)"
 }
+subsets: "chinese-hongkong"
+subsets: "chinese-simplified"
+subsets: "chinese-traditional"
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "japanese"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/fontdasu/ShipporiMincho"
+  commit: "63431fee6c2cfea772325d6251d2935b7cfa7c6d"
+  files {
+    source_file: "fonts/ttf/ShipporiMincho-Regular.ttf"
+    dest_file: "ShipporiMincho-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ShipporiMincho-Medium.ttf"
+    dest_file: "ShipporiMincho-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ShipporiMincho-SemiBold.ttf"
+    dest_file: "ShipporiMincho-SemiBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ShipporiMincho-Bold.ttf"
+    dest_file: "ShipporiMincho-Bold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ShipporiMincho-ExtraBold.ttf"
+    dest_file: "ShipporiMincho-ExtraBold.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "master"
+}
