@@ -15,5 +15,18 @@ fonts {
 subsets: "khmer"
 subsets: "latin"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/danhhong/Metal"
+  commit: "2d74e37de805a7bc4fb3f704897fbfd2f4e0ac7f"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "Release/ttf/Metal-Regular.ttf"
+    dest_file: "Metal-Regular.ttf"
+  }
+  branch: "master"
+}
 stroke: "SERIF"
 classifications: "DISPLAY"
