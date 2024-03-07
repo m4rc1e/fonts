@@ -51,3 +51,32 @@ fonts {
 subsets: "khmer"
 subsets: "latin"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/danhhong/Hanuman"
+  commit: "771c45f6a84d9e2fafb4651b916753631cbbb877"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "Release/ttf/Hanuman-Thin.ttf"
+    dest_file: "Hanuman-Thin.ttf"
+  }
+  files {
+    source_file: "Release/ttf/Hanuman-Light.ttf"
+    dest_file: "Hanuman-Light.ttf"
+  }
+  files {
+    source_file: "Release/ttf/Hanuman-Regular.ttf"
+    dest_file: "Hanuman-Regular.ttf"
+  }
+  files {
+    source_file: "Release/ttf/Hanuman-Bold.ttf"
+    dest_file: "Hanuman-Bold.ttf"
+  }
+  files {
+    source_file: "Release/ttf/Hanuman-Black.ttf"
+    dest_file: "Hanuman-Black.ttf"
+  }
+  branch: "master"
+}
