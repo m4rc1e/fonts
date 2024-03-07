@@ -15,3 +15,16 @@ fonts {
 subsets: "khmer"
 subsets: "latin"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/danhhong/Bokor"
+  commit: "b5d5f6e07e365610ad5a39d42f87505e85702432"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "Release/ttf/Bokor-Regular.ttf"
+    dest_file: "Bokor-Regular.ttf"
+  }
+  branch: "master"
+}
