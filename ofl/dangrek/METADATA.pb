@@ -15,5 +15,18 @@ fonts {
 subsets: "khmer"
 subsets: "latin"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/danhhong/Dangrek"
+  commit: "a8da8cf02ec7e96f45716b0052a027007bb042c2"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "Release/ttf/Dangrek-Regular.ttf"
+    dest_file: "Dangrek-Regular.ttf"
+  }
+  branch: "master"
+}
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
