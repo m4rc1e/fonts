@@ -12,6 +12,9 @@ fonts {
   full_name: "Wavefont Thin"
   copyright: "Copyright 2022 The Wavefont Project Authors (https://github.com/dy/wavefont)"
 }
+subsets: "greek-ext"
+subsets: "latin"
+subsets: "latin-ext"
 subsets: "menu"
 axes {
   tag: "ROND"
@@ -38,7 +41,16 @@ registry_default_overrides {
 }
 source {
   repository_url: "https://github.com/dy/wavefont"
-  commit: "91649d7bede2a302b8b820dbccc2401672400cdd"
+  commit: "f53612d89500dabcb4bd35be3564f09e40e3255c"
+  files {
+    source_file: "AUTHORS.txt"
+    dest_file: "AUTHORS.txt"
+  }
+  files {
+    source_file: "fonts/variable/Wavefont[ROND,YELA,wght].ttf"
+    dest_file: "Wavefont[ROND,YELA,wght].ttf"
+  }
+  branch: "master"
 }
 sample_text {
   masthead_full: "111198765432111987654432111"
