@@ -17,7 +17,16 @@ subsets: "latin-ext"
 subsets: "menu"
 source {
   repository_url: "https://github.com/scfried/soft-type-jersey"
-  commit: "1e98ec50907b66062a3da4b8aaf63bb37b2542f2"
+  commit: "f32179dbeffdb64d0401f34bf9e4e38a768f4cfb"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/ttf/Jersey15-Regular.ttf"
+    dest_file: "Jersey15-Regular.ttf"
+  }
+  branch: "main"
 }
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
