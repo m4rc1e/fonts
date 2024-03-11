@@ -48,10 +48,46 @@ fonts {
   full_name: "Zen Old Mincho Black"
   copyright: "Copyright 2021 The Zen Old Mincho Project Authors (https://github.com/googlefonts/zen-oldmincho)"
 }
+subsets: "chinese-hongkong"
+subsets: "chinese-simplified"
+subsets: "chinese-traditional"
 subsets: "cyrillic"
 subsets: "greek"
 subsets: "japanese"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/googlefonts/zen-oldmincho"
+  commit: "fb46620f2ffcf78debc1a20758e39271a3fb5ea6"
+  files {
+    source_file: "fonts/ttf/ZenOldMincho-Regular.ttf"
+    dest_file: "ZenOldMincho-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenOldMincho-Medium.ttf"
+    dest_file: "ZenOldMincho-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenOldMincho-SemiBold.ttf"
+    dest_file: "ZenOldMincho-SemiBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenOldMincho-Bold.ttf"
+    dest_file: "ZenOldMincho-Bold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenOldMincho-Black.ttf"
+    dest_file: "ZenOldMincho-Black.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "main"
+}
 primary_script: "Jpan"
