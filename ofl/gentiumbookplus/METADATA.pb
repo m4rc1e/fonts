@@ -49,5 +49,27 @@ subsets: "menu"
 subsets: "vietnamese"
 source {
   repository_url: "https://github.com/silnrsi/font-gentium"
+  commit: "b0cbd55e95250a31f4315734e0907e1ac30b3474"
   archive_url: "https://github.com/silnrsi/font-gentium/releases/download/v6.101/GentiumPlus-6.101.zip"
+  files {
+    source_file: "GentiumPlus-6.101/OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "GentiumPlus-6.101/GentiumBookPlus-Regular.ttf"
+    dest_file: "GentiumBookPlus-Regular.ttf"
+  }
+  files {
+    source_file: "GentiumPlus-6.101/GentiumBookPlus-Italic.ttf"
+    dest_file: "GentiumBookPlus-Italic.ttf"
+  }
+  files {
+    source_file: "GentiumPlus-6.101/GentiumBookPlus-Bold.ttf"
+    dest_file: "GentiumBookPlus-Bold.ttf"
+  }
+  files {
+    source_file: "GentiumPlus-6.101/GentiumBookPlus-BoldItalic.ttf"
+    dest_file: "GentiumBookPlus-BoldItalic.ttf"
+  }
+  branch: "master"
 }
