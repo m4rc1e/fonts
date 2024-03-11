@@ -12,8 +12,26 @@ fonts {
   full_name: "Zen Dots Regular"
   copyright: "Copyright 2021 The Dots Project Authors (https://github.com/googlefonts/zen-dots)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/googlefonts/zen-dots"
+  commit: "aa0a34abc0b8ed1c50bfabafc3ce0531be020e56"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "fonts/ttf/ZenDots-Regular.ttf"
+    dest_file: "ZenDots-Regular.ttf"
+  }
+  branch: "main"
+}
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
