@@ -1,8 +1,8 @@
-Copyright 2023 The Noto Project Authors (https://github.com/notofonts/hentaigana)
+Copyright 2023 The Noto Project Authors (https://github.com/notofonts/noto-project-template)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-https://openfontlicense.org
+https://scripts.sil.org/OFL
 
 
 -----------------------------------------------------------
