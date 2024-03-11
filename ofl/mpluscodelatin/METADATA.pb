@@ -26,5 +26,22 @@ axes {
   min_value: 100.0
   max_value: 700.0
 }
+source {
+  repository_url: "https://github.com/coz-m/MPLUS_FONTS"
+  commit: "c47fd4ff0a604d1517625a0f3d67e6d64e12d585"
+  files {
+    source_file: "fonts/ttf/MPLUSCodeLatin[wdth,wght].ttf"
+    dest_file: "MPLUSCodeLatin[wdth,wght].ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "MPlusCodeLatin_DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "master"
+}
 stroke: "SANS_SERIF"
 classifications: "MONOSPACE"
