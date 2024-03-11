@@ -18,7 +18,20 @@ subsets: "latin-ext"
 subsets: "menu"
 source {
   repository_url: "https://github.com/simoncozens/Gulzar"
-  commit: "7f736710573840523e68ea977843f7af7239632b"
+  commit: "e2cfe4977c90463d40f134ca49b5a63cf84a840b"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "fonts/ttf/Gulzar-Regular.ttf"
+    dest_file: "Gulzar-Regular.ttf"
+  }
+  branch: "main"
 }
 minisite_url: "https://gulzarfont.org"
 primary_script: "Arab"
