@@ -48,12 +48,48 @@ fonts {
   full_name: "Zen Maru Gothic Black"
   copyright: "Copyright 2021 The Zen Maru Gothic Authors (https://github.com/googlefonts/zen-marugothic)"
 }
+subsets: "chinese-hongkong"
+subsets: "chinese-simplified"
+subsets: "chinese-traditional"
 subsets: "cyrillic"
 subsets: "greek"
 subsets: "japanese"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/googlefonts/zen-marugothic"
+  commit: "decae11c15a25910ded2a06a9d27ee01c4addc76"
+  files {
+    source_file: "fonts/ttf/ZenMaruGothic-Light.ttf"
+    dest_file: "ZenMaruGothic-Light.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenMaruGothic-Regular.ttf"
+    dest_file: "ZenMaruGothic-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenMaruGothic-Medium.ttf"
+    dest_file: "ZenMaruGothic-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenMaruGothic-Bold.ttf"
+    dest_file: "ZenMaruGothic-Bold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenMaruGothic-Black.ttf"
+    dest_file: "ZenMaruGothic-Black.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "main"
+}
 primary_script: "Jpan"
 stroke: "SERIF"
 classifications: "DISPLAY"
