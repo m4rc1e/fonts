@@ -12,7 +12,9 @@ fonts {
   full_name: "Teko Light"
   copyright: "Copyright 2023 The Teko Project Authors (https://www.github.com/googlefonts/teko)"
 }
+subsets: "cyrillic-ext"
 subsets: "devanagari"
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -22,8 +24,17 @@ axes {
   max_value: 700.0
 }
 source {
-  repository_url: "https://www.github.com/googlefonts/teko"
-  commit: "6715caf853f342eef57ea367b6c2991cd3928398"
+  repository_url: "https://wwwhub.com/googlefonts/teko"
+  commit: "2bf909d46b0061a5e3e16e8acc4fef670e36a8f2"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/variable/Teko[wght].ttf"
+    dest_file: "Teko[wght].ttf"
+  }
+  branch: "master"
 }
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
