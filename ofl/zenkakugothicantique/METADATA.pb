@@ -48,9 +48,45 @@ fonts {
   full_name: "Zen Kaku Gothic Antique Black"
   copyright: "Copyright 2022 The Zen Project Authors (https://github.com/googlefonts/zen-kakugothic)"
 }
+subsets: "chinese-hongkong"
+subsets: "chinese-simplified"
+subsets: "chinese-traditional"
 subsets: "cyrillic"
 subsets: "japanese"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/googlefonts/zen-kakugothic"
+  commit: "81443c39f8364063b747f2f1af778969d60acee8"
+  files {
+    source_file: "fonts/ttf/ZenKakuGothicAntique-Light.ttf"
+    dest_file: "ZenKakuGothicAntique-Light.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenKakuGothicAntique-Regular.ttf"
+    dest_file: "ZenKakuGothicAntique-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenKakuGothicAntique-Medium.ttf"
+    dest_file: "ZenKakuGothicAntique-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenKakuGothicAntique-Bold.ttf"
+    dest_file: "ZenKakuGothicAntique-Bold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/ZenKakuGothicAntique-Black.ttf"
+    dest_file: "ZenKakuGothicAntique-Black.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "main"
+}
 primary_script: "Jpan"
