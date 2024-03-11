@@ -15,5 +15,18 @@ fonts {
 subsets: "khmer"
 subsets: "latin"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/danhhong/Preahvihear"
+  commit: "86b9102c4580df7b52e3320d835ab2ded591dd15"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "Release/ttf/Preahvihear-Regular.ttf"
+    dest_file: "Preahvihear-Regular.ttf"
+  }
+  branch: "master"
+}
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
