@@ -27,7 +27,21 @@ subsets: "latin-ext"
 subsets: "menu"
 source {
   repository_url: "https://github.com/aliftype/aref-ruqaa"
+  commit: "d914ea56cd3df609cfc370dbc021fe197fd10772"
   archive_url: "https://github.com/aliftype/aref-ruqaa/releases/download/v1.005/ArefRuqaa-1.005.zip"
+  files {
+    source_file: "ArefRuqaa-1.005/OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "ArefRuqaa-1.005/ttf/ArefRuqaaInk-Regular.ttf"
+    dest_file: "ArefRuqaaInk-Regular.ttf"
+  }
+  files {
+    source_file: "ArefRuqaa-1.005/ttf/ArefRuqaaInk-Bold.ttf"
+    dest_file: "ArefRuqaaInk-Bold.ttf"
+  }
+  branch: "main"
 }
 primary_script: "Arab"
 stroke: "SERIF"
