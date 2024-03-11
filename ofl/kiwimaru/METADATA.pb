@@ -30,8 +30,37 @@ fonts {
   full_name: "Kiwi Maru Medium"
   copyright: "Copyright 2020 The Kiwi Maru Project Authors (https://github.com/Kiwi-KawagotoKajiru/Kiwi-Maru)"
 }
+subsets: "chinese-hongkong"
+subsets: "chinese-simplified"
+subsets: "chinese-traditional"
 subsets: "cyrillic"
+subsets: "greek-ext"
 subsets: "japanese"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/Kiwi-KawagotoKajiru/Kiwi-Maru"
+  commit: "65a112c7ec9ffe81595406982a670c7f945d7c5b"
+  files {
+    source_file: "fonts/ttf/KiwiMaru-Light.ttf"
+    dest_file: "KiwiMaru-Light.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/KiwiMaru-Medium.ttf"
+    dest_file: "KiwiMaru-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/KiwiMaru-Regular.ttf"
+    dest_file: "KiwiMaru-Regular.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "master"
+}
