@@ -21,12 +21,31 @@ fonts {
   full_name: "Tiro Telugu Italic"
   copyright: "Copyright 2020 The Indigo Project Authors (https://github.com/TiroTypeworks/Indigo)"
 }
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
 subsets: "telugu"
 source {
   repository_url: "https://github.com/TiroTypeworks/Indigo"
-  commit: "24f67ca20ca4720eb4302592f2e0f6ec21042a5d"
+  commit: "c5f23cb391c99bb3e5c3308568c31319e2e7fbd1"
+  files {
+    source_file: "fonts/OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "docs/descriptions/TiroTelugu/DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "fonts/TiroTelugu/TTF/TiroTelugu-Regular.ttf"
+    dest_file: "TiroTelugu-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/TiroTelugu/TTF/TiroTelugu-Italic.ttf"
+    dest_file: "TiroTelugu-Italic.ttf"
+  }
+  branch: "main"
 }
 primary_script: "Telu"
