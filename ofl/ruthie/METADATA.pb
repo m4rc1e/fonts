@@ -12,9 +12,27 @@ fonts {
   full_name: "Ruthie Regular"
   copyright: "Copyright 2014 The Ruthie Project Authors (https://github.com/googlefonts/ruthie)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
 subsets: "vietnamese"
+source {
+  repository_url: "https://github.com/googlefonts/ruthie"
+  commit: "73c981515aaf81ab6b027f7e10716f6be62c3fd5"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "fonts/ttf/Ruthie-Regular.ttf"
+    dest_file: "Ruthie-Regular.ttf"
+  }
+  branch: "master"
+}
 classifications: "DISPLAY"
 classifications: "HANDWRITING"
