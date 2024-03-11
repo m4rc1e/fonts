@@ -30,10 +30,36 @@ fonts {
   full_name: "Dongle Bold"
   copyright: "Copyright 2021 The Dongle Project Authors (https://github.com/yangheeryu/Dongle)"
 }
+subsets: "greek-ext"
 subsets: "korean"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
 subsets: "vietnamese"
+source {
+  repository_url: "https://github.com/yangheeryu/Dongle"
+  commit: "f7127c4d2450e1cad20254ec692591347e2fc260"
+  files {
+    source_file: "fonts/ttf/Dongle-Light.ttf"
+    dest_file: "Dongle-Light.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Dongle-Regular.ttf"
+    dest_file: "Dongle-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Dongle-Bold.ttf"
+    dest_file: "Dongle-Bold.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "master"
+}
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
