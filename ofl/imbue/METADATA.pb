@@ -12,6 +12,7 @@ fonts {
   full_name: "Imbue Thin"
   copyright: "Copyright 2020 The Imbue Project Authors (https://github.com/Etcetera-Type-Co/Imbue)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -29,6 +30,127 @@ axes {
 registry_default_overrides {
   key: "opsz"
   value: 10.0
+}
+source {
+  repository_url: "https://github.com/Etcetera-Type-Co/Imbue"
+  commit: "41b16f3fd61d33cacad0e579c35ef9566817184b"
+  files {
+    source_file: "fonts/variable/Imbue[opsz,wght].ttf"
+    dest_file: "Imbue[opsz,wght].ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-Black.ttf"
+    dest_file: "static/Imbue10pt-Black.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-Bold.ttf"
+    dest_file: "static/Imbue10pt-Bold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-ExtraBold.ttf"
+    dest_file: "static/Imbue10pt-ExtraBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-ExtraLight.ttf"
+    dest_file: "static/Imbue10pt-ExtraLight.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-Light.ttf"
+    dest_file: "static/Imbue10pt-Light.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-Medium.ttf"
+    dest_file: "static/Imbue10pt-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-Regular.ttf"
+    dest_file: "static/Imbue10pt-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-SemiBold.ttf"
+    dest_file: "static/Imbue10pt-SemiBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue10pt-Thin.ttf"
+    dest_file: "static/Imbue10pt-Thin.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-Black.ttf"
+    dest_file: "static/Imbue50pt-Black.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-Bold.ttf"
+    dest_file: "static/Imbue50pt-Bold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-ExtraBold.ttf"
+    dest_file: "static/Imbue50pt-ExtraBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-ExtraLight.ttf"
+    dest_file: "static/Imbue50pt-ExtraLight.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-Light.ttf"
+    dest_file: "static/Imbue50pt-Light.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-Medium.ttf"
+    dest_file: "static/Imbue50pt-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-Regular.ttf"
+    dest_file: "static/Imbue50pt-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-SemiBold.ttf"
+    dest_file: "static/Imbue50pt-SemiBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue50pt-Thin.ttf"
+    dest_file: "static/Imbue50pt-Thin.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-Black.ttf"
+    dest_file: "static/Imbue100pt-Black.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-Bold.ttf"
+    dest_file: "static/Imbue100pt-Bold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-ExtraBold.ttf"
+    dest_file: "static/Imbue100pt-ExtraBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-ExtraLight.ttf"
+    dest_file: "static/Imbue100pt-ExtraLight.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-Light.ttf"
+    dest_file: "static/Imbue100pt-Light.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-Medium.ttf"
+    dest_file: "static/Imbue100pt-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-Regular.ttf"
+    dest_file: "static/Imbue100pt-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-SemiBold.ttf"
+    dest_file: "static/Imbue100pt-SemiBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Imbue100pt-Thin.ttf"
+    dest_file: "static/Imbue100pt-Thin.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  branch: "master"
 }
 stroke: "SERIF"
 classifications: "DISPLAY"
