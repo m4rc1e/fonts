@@ -48,12 +48,47 @@ fonts {
   full_name: "Tsukimi Rounded Bold"
   copyright: "Copyright 2020 The Tsukimi Rounded Project Authors (https://github.com/mt-funa/Tsukimi-Rounded), all rights reserved."
 }
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "japanese"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
-languages: "ja_Kana"
-languages: "ja_Hira"
+source {
+  repository_url: "https://github.com/mt-funa/Tsukimi-Rounded"
+  commit: "7199ebaed5a78b14f7824cc3ea44f5694e790807"
+  files {
+    source_file: "fonts/ttf/TsukimiRounded-Light.ttf"
+    dest_file: "TsukimiRounded-Light.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/TsukimiRounded-Regular.ttf"
+    dest_file: "TsukimiRounded-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/TsukimiRounded-Medium.ttf"
+    dest_file: "TsukimiRounded-Medium.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/TsukimiRounded-SemiBold.ttf"
+    dest_file: "TsukimiRounded-SemiBold.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/TsukimiRounded-Bold.ttf"
+    dest_file: "TsukimiRounded-Bold.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "master"
+}
+languages: "ja_Kana"  # Japanese, Katakana
+languages: "ja_Hira"  # Japanese, Hiragana
 primary_script: "Hira"
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
