@@ -12,6 +12,9 @@ fonts {
   full_name: "Climate Crisis Regular"
   copyright: "Copyright 2020 The Climate Crisis Project Authors (https://github.com/dancoull/ClimateCrisis)"
 }
+subsets: "cyrillic"
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -26,7 +29,16 @@ registry_default_overrides {
 }
 source {
   repository_url: "https://github.com/dancoull/ClimateCrisis"
-  commit: "e0398e2d7e84a9f08cf7ec67bb463e4e2bb35431"
+  commit: "ece6566dff92e793e3d22ae01ed9bb8af5095ad5"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/variable/ClimateCrisis[YEAR].ttf"
+    dest_file: "ClimateCrisis[YEAR].ttf"
+  }
+  branch: "main"
 }
 minisite_url: "https://kampanjat.hs.fi/climatefont"
 stroke: "SANS_SERIF"
