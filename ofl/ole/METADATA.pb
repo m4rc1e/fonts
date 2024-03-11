@@ -12,7 +12,25 @@ fonts {
   full_name: "Ole Regular"
   copyright: "Copyright 2008 The Ole Project Authors (https://github.com/googlefonts/ole)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
 subsets: "vietnamese"
+source {
+  repository_url: "https://github.com/googlefonts/ole"
+  commit: "fe77f34a3002bc4c2e26a8e27bee31cb45307846"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "fonts/ttf/Ole-Regular.ttf"
+    dest_file: "Ole-Regular.ttf"
+  }
+  branch: "master"
+}
