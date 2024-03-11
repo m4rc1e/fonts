@@ -13,6 +13,7 @@ fonts {
   copyright: "Copyright 2022 The Alexandria Project Authors (https://github.com/Gue3bara/Alexandria)"
 }
 subsets: "arabic"
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -24,6 +25,19 @@ axes {
 }
 source {
   repository_url: "https://github.com/Gue3bara/Alexandria"
-  commit: "cee89798e4b38c8df61477a646aa9c111314e6ae"
+  commit: "4fd1422be3488837c41fbdb84a77350f0f56a734"
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/variable/Alexandria[wght].ttf"
+    dest_file: "Alexandria[wght].ttf"
+  }
+  branch: "master"
 }
 primary_script: "Arab"
