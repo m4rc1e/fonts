@@ -17,7 +17,9 @@ subsets: "armenian"
 subsets: "cyrillic"
 subsets: "cyrillic-ext"
 subsets: "greek"
+subsets: "greek-ext"
 subsets: "hebrew"
+subsets: "korean"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -43,7 +45,16 @@ registry_default_overrides {
 }
 source {
   repository_url: "https://github.com/rosettatype/handjet"
-  commit: "3918b7798e06c81da6bc558e88dfddd5a6b49807"
+  commit: "91e0cf7d364d49c16cc79c43beab7dd97e629086"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/Handjet[ELGR,ELSH,wght].ttf"
+    dest_file: "Handjet[ELGR,ELSH,wght].ttf"
+  }
+  branch: "master"
 }
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
