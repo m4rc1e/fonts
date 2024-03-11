@@ -21,6 +21,7 @@ fonts {
   full_name: "REM Medium Italic"
   copyright: "Copyright 2019 The REM Project Authors (https://github.com/octaviopardo/REM)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -33,4 +34,21 @@ axes {
 source {
   repository_url: "https://github.com/octaviopardo/REM"
   commit: "b26d584ebdb3d8084355205d22c87e4e99658d56"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "documentation/DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "fonts/variable/REM[wght].ttf"
+    dest_file: "REM[wght].ttf"
+  }
+  files {
+    source_file: "fonts/variable/REM-Italic[wght].ttf"
+    dest_file: "REM-Italic[wght].ttf"
+  }
+  branch: "master"
 }
