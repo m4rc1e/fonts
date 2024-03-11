@@ -12,6 +12,7 @@ fonts {
   full_name: "Lexend Mega Regular"
   copyright: "Copyright 2019 The Lexend Project Authors (https://github.com/googlefonts/lexend)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -20,4 +21,17 @@ axes {
   tag: "wght"
   min_value: 100.0
   max_value: 900.0
+}
+source {
+  repository_url: "https://github.com/googlefonts/lexend"
+  commit: "7894f02b2e7eabc48595f1d4eff3b17b48c6e651"
+  files {
+    source_file: "fonts/mega/variable/LexendMega[wght].ttf"
+    dest_file: "LexendMega[wght].ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  branch: "main"
 }
