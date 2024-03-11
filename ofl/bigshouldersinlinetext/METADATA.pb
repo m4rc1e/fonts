@@ -1,15 +1,15 @@
-name: "Big Shoulders Inline Text"
+name: "Big Shoulders Inline"
 designer: "Patric King"
 license: "OFL"
 category: "DISPLAY"
 date_added: "2020-10-13"
 fonts {
-  name: "Big Shoulders Inline Text"
+  name: "Big Shoulders Inline"
   style: "normal"
   weight: 400
   filename: "BigShouldersInlineText[wght].ttf"
-  post_script_name: "BigShouldersInlineText-Thin"
-  full_name: "Big Shoulders Inline Text Thin"
+  post_script_name: "BigShouldersInline-Thin"
+  full_name: "Big Shoulders Inline Thin"
   copyright: "Copyright 2019 The Big Shoulders Project Authors (https://github.com/xotypeco/big_shoulders)"
 }
 subsets: "latin"
@@ -20,6 +20,23 @@ axes {
   tag: "wght"
   min_value: 100.0
   max_value: 900.0
+}
+source {
+  repository_url: "https://github.com/xotypeco/big_shoulders"
+  commit: "0b3d09a86862b19efae28eae0cd868f17c476b20"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "Documentation/DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "Big-Shoulders-Inline/fonts/variable/text/BigShouldersInlineText[wght].ttf"
+    dest_file: "BigShouldersInlineText[wght].ttf"
+  }
+  branch: "master"
 }
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
