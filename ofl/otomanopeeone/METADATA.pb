@@ -12,7 +12,26 @@ fonts {
   full_name: "Otomanopee One Regular"
   copyright: "Copyright 2020 The Otomanopee Project Authors (https://github.com/Gutenberg-Labo), all rights reserved."
 }
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "japanese"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/Gutenberg-Labo/Otomanopee"
+  commit: "726daba0dc4e5c7f600fa47f936ff9c1a2423c89"
+  files {
+    source_file: "fonts/ttf/OtomanopeeOne-Regular.ttf"
+    dest_file: "OtomanopeeOne-Regular.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "master"
+}
