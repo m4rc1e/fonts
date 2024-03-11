@@ -15,3 +15,16 @@ fonts {
 subsets: "khmer"
 subsets: "latin"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/danhhong/Moulpali"
+  commit: "fdfa5638779a2fe76414b2c1ff449435608df23c"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "Release/ttf/Moulpali-Regular.ttf"
+    dest_file: "Moulpali-Regular.ttf"
+  }
+  branch: "master"
+}
