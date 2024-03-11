@@ -12,8 +12,29 @@ fonts {
   full_name: "Mochiy Pop P One Regular"
   copyright: "Copyright 2020 The MochiyPop Project Authors (https://github.com/fontdasu/Mochiypop)"
 }
+subsets: "chinese-hongkong"
+subsets: "chinese-simplified"
+subsets: "chinese-traditional"
+subsets: "greek-ext"
 subsets: "japanese"
 subsets: "latin"
 subsets: "menu"
+source {
+  repository_url: "https://github.com/fontdasu/Mochiypop"
+  commit: "abfad63da547669df885d84269b5c1d5d3b913a5"
+  files {
+    source_file: "fonts/ttf/MochiyPopPOne-Regular.ttf"
+    dest_file: "MochiyPopPOne-Regular.ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "P_DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "master"
+}
 stroke: "SANS_SERIF"
 classifications: "DISPLAY"
