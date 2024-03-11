@@ -12,6 +12,7 @@ fonts {
   full_name: "Signika Negative Light"
   copyright: "Copyright 2018 The Signika Project Authors (https://github.com/googlefonts/Signika)."
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -20,4 +21,17 @@ axes {
   tag: "wght"
   min_value: 300.0
   max_value: 700.0
+}
+source {
+  repository_url: "https://github.com/aaronbell/signika"
+  commit: "bd066259b5a87d24b23c4f0da03a96889b6d0503"
+  files {
+    source_file: "fonts/variable_negative/SignikaNegative[wght].ttf"
+    dest_file: "SignikaNegative[wght].ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  branch: "master"
 }
