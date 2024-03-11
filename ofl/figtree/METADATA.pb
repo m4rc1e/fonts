@@ -21,6 +21,7 @@ fonts {
   full_name: "Figtree Light Italic"
   copyright: "Copyright 2022 The Figtree Project Authors (https://github.com/erikdkennedy/figtree)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -31,6 +32,19 @@ axes {
 }
 source {
   repository_url: "https://github.com/erikdkennedy/figtree"
-  commit: "efdedb2a9337b5baa897771e91ac9203f99e2084"
+  commit: "937cfe82ffa598f4965350aa9edfdf133f483d90"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/variable/Figtree[wght].ttf"
+    dest_file: "Figtree[wght].ttf"
+  }
+  files {
+    source_file: "fonts/variable/Figtree-Italic[wght].ttf"
+    dest_file: "Figtree-Italic[wght].ttf"
+  }
+  branch: "master"
 }
 minisite_url: "https://www.erikdkennedy.com/projects/figtree.html"
