@@ -2,7 +2,7 @@ name: "Maven Pro"
 designer: "Joe Prince"
 license: "OFL"
 category: "SANS_SERIF"
-date_added: "2011-05-25"
+date_added: "2024-03-26"
 fonts {
   name: "Maven Pro"
   style: "normal"
@@ -12,6 +12,8 @@ fonts {
   full_name: "Maven Pro Regular"
   copyright: "Copyright 2011 The Maven Pro Project Authors (http://www.vissol.co.uk/mavenpro/), with Reserved Font Name \"Maven Pro\"."
 }
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -22,5 +24,15 @@ axes {
   max_value: 900.0
 }
 source {
-  repository_url: "https://github.com/googlefonts/mavenproFont"
+  repository_url: "https://www.github.com/googlefonts/mavenproFont"
+  commit: "1c21ee500b7b87a4871696519fc84107a1a001df"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/variable/MavenPro[wght].ttf"
+    dest_file: "MavenPro[wght].ttf"
+  }
+  branch: "main"
 }
