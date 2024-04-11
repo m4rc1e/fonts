@@ -1,30 +1,54 @@
 # New
+ofl/jacquard12charted # https://github.com/google/fonts/pull/7300
+ofl/jacquard24 # https://github.com/google/fonts/pull/7305
+ofl/jacquardabastarda9charted # https://github.com/google/fonts/pull/7084
+ofl/jersey10 # https://github.com/google/fonts/pull/7319
+ofl/jersey10charted # https://github.com/google/fonts/pull/7320
+ofl/jersey15 # https://github.com/google/fonts/pull/7335
+ofl/jersey15charted # https://github.com/google/fonts/pull/7336
+ofl/jersey20 # https://github.com/google/fonts/pull/7384
+ofl/jersey20charted # https://github.com/google/fonts/pull/7385
+ofl/jersey25 # https://github.com/google/fonts/pull/7386
+ofl/micro5charted # https://github.com/google/fonts/pull/7082
 ofl/notoznamennymusicalnotation # https://github.com/google/fonts/pull/7087
-ofl/redditmono # https://github.com/google/fonts/pull/7315
-ofl/tacone # https://github.com/google/fonts/pull/7306
-ofl/yarndings12 # https://github.com/google/fonts/pull/7215
-ofl/yarndings12charted # https://github.com/google/fonts/pull/7216
-ofl/yarndings20 # https://github.com/google/fonts/pull/7219
-ofl/yarndings20charted # https://github.com/google/fonts/pull/7220
+ofl/platypi # https://github.com/google/fonts/pull/7321
+ofl/sedan # https://github.com/google/fonts/pull/7340
 
 # Upgrade
-ofl/bodonimoda # https://github.com/google/fonts/pull/6951
-ofl/davidlibre # https://github.com/google/fonts/pull/7052
+ofl/dohyeon # https://github.com/google/fonts/pull/7207
+ofl/frankruhllibre # https://github.com/google/fonts/pull/7332
 ofl/gelasio # https://github.com/google/fonts/pull/7308
+ofl/jua # https://github.com/google/fonts/pull/7207
+ofl/kiranghaerang # https://github.com/google/fonts/pull/7207
+ofl/notonaskharabic # https://github.com/google/fonts/pull/6857
+ofl/notosansoriya # https://github.com/google/fonts/pull/7347
 ofl/roboto # https://github.com/google/fonts/pull/7231
+ofl/yeonsung # https://github.com/google/fonts/pull/7207
 
 # Designer profile
-catalog/designers/davidudoh # https://github.com/google/fonts/pull/7287
-catalog/designers/eyiyemiadegbite # https://github.com/google/fonts/pull/7304
-catalog/designers/tauraivaleriemtake/ # https://github.com/google/fonts/pull/7303
+catalog/designers/davidsargent # https://github.com/google/fonts/pull/7330
+catalog/designers/sebastiansalazar # https://github.com/google/fonts/pull/7339
+catalog/designers/seyiolusanya # https://github.com/google/fonts/pull/7369
+catalog/designers/stephenhutchings # https://github.com/google/fonts/pull/7331
 
 # Metadata / Description / License
-ofl/jacquardabastarda9 # https://github.com/google/fonts/pull/7242
-ofl/notosanssymbols # https://github.com/google/fonts/pull/7293
+ofl/creteround # https://github.com/google/fonts/pull/7362
 ofl/dmsans # https://github.com/google/fonts/pull/7316
+ofl/domine # https://github.com/google/fonts/pull/7365
+ofl/gabriela # https://github.com/google/fonts/pull/7360
+ofl/gfsdidot # https://github.com/google/fonts/pull/7357
+ofl/kurale # https://github.com/google/fonts/pull/7360
+ofl/mallanna # https://github.com/google/fonts/pull/7344
+ofl/mandali # https://github.com/google/fonts/pull/7344
+ofl/manjari # https://github.com/google/fonts/pull/7344
+ofl/markoone # https://github.com/google/fonts/pull/7344
+ofl/martel # https://github.com/google/fonts/pull/7344
+ofl/martelsans # https://github.com/google/fonts/pull/7344
+ofl/mavenpro # https://github.com/google/fonts/pull/7344
+ofl/ojuju # https://github.com/google/fonts/pull/7333
+ofl/playpensans # https://github.com/google/fonts/pull/7073
 ofl/poppins # https://github.com/google/fonts/pull/7316
 ofl/rethinksans # https://github.com/google/fonts/pull/7316
-ofl/robotoflex/ # https://github.com/google/fonts/pull/7088
 
 # Sample texts
 lang/languages/ar_Arab.textproto # https://github.com/google/fonts/pull/7146
@@ -68,7 +92,6 @@ lang/languages/goa_Latn.textproto # https://github.com/google/fonts/pull/7146
 lang/languages/gov_Latn.textproto # https://github.com/google/fonts/pull/7146
 lang/languages/grb_Latn.textproto # https://github.com/google/fonts/pull/7146
 lang/languages/gvl_Latn.textproto # https://github.com/google/fonts/pull/7146
-lang/languages/he_Hebr.textproto # https://github.com/google/fonts/pull/7224
 lang/languages/hna_Latn.textproto # https://github.com/google/fonts/pull/7146
 lang/languages/hz_Latn.textproto # https://github.com/google/fonts/pull/7146
 lang/languages/ijs_Latn.textproto # https://github.com/google/fonts/pull/7146
