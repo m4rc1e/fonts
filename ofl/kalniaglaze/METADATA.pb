@@ -1,8 +1,8 @@
 name: "Kalnia Glaze"
-designer: "Frida Medrano"
+designer: "UNKNOWN"
 license: "OFL"
-category: "DISPLAY"
-date_added: "2024-03-27"
+category: "SANS_SERIF"
+date_added: "2024-04-11"
 fonts {
   name: "Kalnia Glaze"
   style: "normal"
@@ -10,8 +10,9 @@ fonts {
   filename: "KalniaGlaze[wdth,wght].ttf"
   post_script_name: "KalniaGlaze-Thin"
   full_name: "Kalnia Glaze Thin"
-  copyright: "Copyright 2022 The Kalnia Glaze Project Authors (https://github.com/fridamedrano/Kalnia-Glaze)"
+  copyright: "Copyright 2022 The Kalnia Project Authors (https://github.com/fridamedrano/Kalnia-Glaze)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -28,17 +29,14 @@ axes {
 source {
   repository_url: "https://github.com/fridamedrano/Kalnia-Glaze"
   commit: "65e7c785d950985a8936a35c8c525db44fb63965"
-  archive_url: "https://github.com/fridamedrano/Kalnia-Glaze/releases/download/v1.107/Kalnia-Glaze-v1.107.zip"
+  archive_url: "https://github.com/fridamedrano/Kalnia-Glaze/releases/download/v1.106/Kalnia-Glaze-v1.106.zip"
   files {
     source_file: "OFL.txt"
     dest_file: "OFL.txt"
   }
   files {
-    source_file: "KalniaGlaze[wdth,wght].ttf"
+    source_file: "fonts/variable/KalniaGlaze[wdth,wght].ttf"
     dest_file: "KalniaGlaze[wdth,wght].ttf"
   }
   branch: "main"
 }
-minisite_url: "https://www.fridamedrano.com/kalniaglaze"
-stroke: "SERIF"
-classifications: "DISPLAY"
