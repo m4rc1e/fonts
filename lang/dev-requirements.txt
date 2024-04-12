@@ -1,5 +1,0 @@
-uharfbuzz
-youseedee
-black
-isort
-pytest

@@ -1,2 +1,0 @@
-designer: "Sebastián Salazar"
-link: ""

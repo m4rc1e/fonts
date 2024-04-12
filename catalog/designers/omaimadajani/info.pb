@@ -1,2 +1,0 @@
-designer: "Omaima Dajani"
-link: ""

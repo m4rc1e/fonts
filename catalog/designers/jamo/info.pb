@@ -1,2 +1,0 @@
-designer: "JAMO"
-link: ""

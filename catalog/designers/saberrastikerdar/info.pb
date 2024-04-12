@@ -1,2 +1,0 @@
-designer: "Saber Rastikerdar"
-link: ""

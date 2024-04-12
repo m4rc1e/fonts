@@ -1,2 +1,0 @@
-designer: "Andrey Kudryavtsev"
-link: ""
