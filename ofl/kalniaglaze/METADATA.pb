@@ -10,7 +10,7 @@ fonts {
   filename: "KalniaGlaze[wdth,wght].ttf"
   post_script_name: "KalniaGlaze-Thin"
   full_name: "Kalnia Glaze Thin"
-  copyright: "Copyright 2022 The Kalnia Project Authors (https://github.com/fridamedrano/Kalnia-Glaze)"
+  copyright: "Copyright 2022 The Kalnia Glaze Project Authors (https://github.com/fridamedrano/Kalnia-Glaze)"
 }
 subsets: "greek-ext"
 subsets: "latin"
@@ -29,7 +29,7 @@ axes {
 source {
   repository_url: "https://github.com/fridamedrano/Kalnia-Glaze"
   commit: "65e7c785d950985a8936a35c8c525db44fb63965"
-  archive_url: "https://github.com/fridamedrano/Kalnia-Glaze/releases/download/v1.106/Kalnia-Glaze-v1.106.zip"
+  archive_url: "https://github.com/fridamedrano/Kalnia-Glaze/releases/download/v1.107/Kalnia-Glaze-v1.107.zip"
   files {
     source_file: "OFL.txt"
     dest_file: "OFL.txt"
