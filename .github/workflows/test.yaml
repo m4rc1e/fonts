@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.10']
-        os: [windows-latest, macos-latest, ubuntu-latest]
+        os: [windows-latest, macos-12, ubuntu-latest]
     steps:
       - name: Cancel previous
         uses: styfle/cancel-workflow-action@0.11.0
@@ -35,8 +35,6 @@ jobs:
 
       - name: Setup Firefox
         uses: browser-actions/setup-firefox@latest
-        with:
-          firefox-version: 125.0.2
       - name: Setup Firefox Driver
         uses: browser-actions/setup-geckodriver@latest
         with:
