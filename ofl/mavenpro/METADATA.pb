@@ -23,4 +23,18 @@ axes {
 }
 source {
   repository_url: "https://github.com/googlefonts/mavenproFont"
+  commit: "1c21ee500b7b87a4871696519fc84107a1a001df"
+  files {
+    source_file: "fonts/variable/MavenPro[wght].ttf"
+    dest_file: "MavenPro[wght].ttf"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "documentation/DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  branch: "main"
 }
