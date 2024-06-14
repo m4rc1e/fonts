@@ -12,7 +12,9 @@ fonts {
   full_name: "Gajraj One Regular"
   copyright: "Copyright 2022 The GajrajOne Project Authors (https://github.com/xconsau/gajrajone)"
 }
+subsets: "cyrillic-ext"
 subsets: "devanagari"
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
