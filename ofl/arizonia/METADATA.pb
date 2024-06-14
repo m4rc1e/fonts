@@ -12,6 +12,7 @@ fonts {
   full_name: "Arizonia Regular"
   copyright: "Copyright 2007-2021 The Arizonia Project Authors (https://github.com/googlefonts/arizonia)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
