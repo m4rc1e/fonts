@@ -12,6 +12,8 @@ fonts {
   full_name: "Lavishly Yours Regular"
   copyright: "Copyright 2014-2021 The Lavishly Yours Project Authors (https://github.com/googlefonts/lavishly-yours)"
 }
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
