@@ -21,6 +21,7 @@ fonts {
   full_name: "REM Medium Italic"
   copyright: "Copyright 2019 The REM Project Authors (https://github.com/octaviopardo/REM)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
