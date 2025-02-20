@@ -12,6 +12,7 @@ fonts {
   full_name: "Splash Regular"
   copyright: "Copyright 2017-2021 The Splash Project Authors (https://github.com/googlefonts/splash)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
