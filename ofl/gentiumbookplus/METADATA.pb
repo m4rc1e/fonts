@@ -49,6 +49,7 @@ subsets: "menu"
 subsets: "vietnamese"
 source {
   repository_url: "https://github.com/silnrsi/font-gentium"
+  commit: "b0cbd55e95250a31f4315734e0907e1ac30b3474"
   archive_url: "https://github.com/silnrsi/font-gentium/releases/download/v6.101/GentiumPlus-6.101.zip"
   files {
     source_file: "GentiumPlus-6.101/OFL.txt"
