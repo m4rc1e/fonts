@@ -21,6 +21,7 @@ fonts {
   full_name: "Tai Heritage Pro Bold"
   copyright: "Copyright (c) 1995-2017, SIL International (www.sil.org)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
@@ -28,6 +29,7 @@ subsets: "tai-viet"
 subsets: "vietnamese"
 source {
   repository_url: "https://github.com/silnrsi/font-taiheritagepro"
+  commit: "823721575626224fd25c1d045cf48f02304c0638"
   archive_url: "https://github.com/silnrsi/font-taiheritagepro/releases/download/v2.600/TaiHeritagePro-2.600.zip"
   files {
     source_file: "TaiHeritagePro-2.600/OFL.txt"
@@ -43,4 +45,5 @@ source {
   }
   branch: "master"
 }
+languages: "blt_Tavt"  # Tai Dam
 primary_script: "Tavt"
