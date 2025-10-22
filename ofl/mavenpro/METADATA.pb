@@ -8,7 +8,7 @@ fonts {
   style: "normal"
   weight: 400
   filename: "MavenPro[wght].ttf"
-  post_script_name: "MavenPro-Regular"
+  post_script_name: "MavenPro-Regular2"
   full_name: "Maven Pro Regular"
   copyright: "Copyright 2011 The Maven Pro Project Authors (https://github.com/m4rc1e/mavenproFont), with Reserved Font Name \"Maven Pro\"."
 }
