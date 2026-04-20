@@ -111,6 +111,8 @@ jobs:
       - name: Install interpolatable
         run: |
           cargo install --git https://github.com/simoncozens/interpolatable
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - name: Run Diffenator and Fontspector
         run: |
           mkdir out
