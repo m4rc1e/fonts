@@ -12,6 +12,8 @@ fonts {
   full_name: "Oxanium ExtraLight"
   copyright: "Copyright 2019 The Oxanium Project Authors (https://github.com/sevmeyer/oxanium)"
 }
+subsets: "cyrillic-ext"
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
