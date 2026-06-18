@@ -12,6 +12,7 @@ fonts {
   full_name: "Imbue Thin"
   copyright: "Copyright 2020 The Imbue Project Authors (https://github.com/Etcetera-Type-Co/Imbue)"
 }
+subsets: "greek-ext"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
