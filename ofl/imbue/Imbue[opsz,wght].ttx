@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ttFont sfntVersion="\x00\x01\x00\x00" ttLibVersion="4.31">
+
+  <fvar>
+
+    <!-- Weight -->
+    <Axis>
+      <AxisTag>wght</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>100.0</MinValue>
+      <DefaultValue>100.0</DefaultValue>
+      <MaxValue>900.0</MaxValue>
+      <AxisNameID>256</AxisNameID>
+    </Axis>
+
+    <!-- Optical size -->
+    <Axis>
+      <AxisTag>opsz</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>10.0</MinValue>
+      <DefaultValue>10.0</DefaultValue>
+      <MaxValue>100.0</MaxValue>
+      <AxisNameID>257</AxisNameID>
+    </Axis>
+
+    <!-- Thin -->
+    <!-- PostScript: Imbue-Thin -->
+    <NamedInstance flags="0x0" postscriptNameID="270" subfamilyNameID="258">
+      <coord axis="wght" value="100.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+
+    <!-- ExtraLight -->
+    <!-- PostScript: Imbue-ExtraLight -->
+    <NamedInstance flags="0x0" postscriptNameID="271" subfamilyNameID="259">
+      <coord axis="wght" value="200.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+
+    <!-- Light -->
+    <!-- PostScript: Imbue-Light -->
+    <NamedInstance flags="0x0" postscriptNameID="272" subfamilyNameID="260">
+      <coord axis="wght" value="300.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+
+    <!-- Regular -->
+    <!-- PostScript: Imbue-Regular -->
+    <NamedInstance flags="0x0" postscriptNameID="273" subfamilyNameID="261">
+      <coord axis="wght" value="400.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+
+    <!-- Medium -->
+    <!-- PostScript: Imbue-Medium -->
+    <NamedInstance flags="0x0" postscriptNameID="274" subfamilyNameID="262">
+      <coord axis="wght" value="500.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+
+    <!-- SemiBold -->
+    <!-- PostScript: Imbue-SemiBold -->
+    <NamedInstance flags="0x0" postscriptNameID="275" subfamilyNameID="263">
+      <coord axis="wght" value="600.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+
+    <!-- Bold -->
+    <!-- PostScript: Imbue-Bold -->
+    <NamedInstance flags="0x0" postscriptNameID="276" subfamilyNameID="264">
+      <coord axis="wght" value="700.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+
+    <!-- ExtraBold -->
+    <!-- PostScript: Imbue-ExtraBold -->
+    <NamedInstance flags="0x0" postscriptNameID="277" subfamilyNameID="265">
+      <coord axis="wght" value="800.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+
+    <!-- Black -->
+    <!-- PostScript: Imbue-Black -->
+    <NamedInstance flags="0x0" postscriptNameID="278" subfamilyNameID="266">
+      <coord axis="wght" value="900.0"/>
+      <coord axis="opsz" value="10.0"/>
+    </NamedInstance>
+  </fvar>
+
+</ttFont>
